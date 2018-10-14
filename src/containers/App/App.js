@@ -10,7 +10,12 @@ const App = () => (
     <img src={logo} className="App-logo" alt="logo" />
     <Switch>
       {routes.map(r => (
-        <Route exact={r.exact} path={r.path} component={r.component} />
+        <Route
+          key={r.path}
+          exact={r.exact}
+          path={r.path}
+          component={r.component}
+        />
       ))}
     </Switch>
   </div>
