@@ -13,6 +13,7 @@
   },
   "globals": {
     "window": true,
-    "navigator": true
+    "navigator": true,
+    "document": true
   }
 }
