@@ -5,9 +5,12 @@ import { ApolloClient } from 'apollo-client'
 import { createHttpLink } from 'apollo-link-http'
 import { InMemoryCache } from 'apollo-cache-inmemory'
 import { BrowserRouter } from 'react-router-dom'
+import { IntlProvider } from 'react-intl'
+
 import App from './containers/App/App'
 import * as serviceWorker from './serviceWorker'
 import './styles/theme.scss'
+import { language, translations } from './translations/i18n'
 
 // `dotenv` config
 require('dotenv').config()
@@ -22,11 +25,13 @@ const client = new ApolloClient({
 })
 
 ReactDOM.render(
-  <BrowserRouter>
-    <ApolloProvider client={client}>
-      <App />
-    </ApolloProvider>
-  </BrowserRouter>,
+  <ApolloProvider client={client}>
+    <IntlProvider locale={language} messages={translations[language]}>
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
+    </IntlProvider>
+  </ApolloProvider>,
   document.getElementById('root')
 )
 
