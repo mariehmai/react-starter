@@ -1,4 +1,7 @@
 @import '../containers/App/styles';
+@import '../components/Header/styles';
+
+$white-color: white;
 
 body {
   margin: 0;
@@ -13,4 +16,20 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+button {
+  &.nav {
+    color: $white-color;
+  }
+}
+
+h2 {
+  &.headline {
+    font-weight: bold;
+  }
+
+  &.nav {
+    color: $white-color;
+  }
 }

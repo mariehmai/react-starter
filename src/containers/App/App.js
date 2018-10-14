@@ -2,12 +2,10 @@ import React from 'react'
 import { Switch, Route } from 'react-router-dom'
 import routes from './routes'
 import Header from '../../components/Header'
-import logo from '../../assets/logo.svg'
 
 const App = () => (
   <div className="app">
     <Header />
-    <img src={logo} className="App-logo" alt="logo" />
     <Switch>
       {routes.map(r => (
         <Route
