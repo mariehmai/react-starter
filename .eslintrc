@@ -9,6 +9,7 @@
     "arrow-body-style": 2,
     "react/no-unused-prop-types": 0,
     "import/no-unresolved": 2,
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
     "import/newline-after-import": "error"
   },
   "globals": {
