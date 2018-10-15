@@ -2,19 +2,29 @@
   .header {
     .header-nav-container {
       visibility: hidden;
-    }
-    
-    .header-nav-menu-icon {
-      visibility: visible;
+
+      .header-nav-icon-container {
+        visibility: visible;
+      }
     }
   }
 }
 
 .header {
-  display: flex;
-  align-items: flex-start;
-  height: 0.1%;
-  background-color: var(--dark-color);
+  top: 0px;
+  position: fixed;
+  width: 100%;
+  display: block;
+
+  .header-content {
+    display: flex;
+    flex: 1;
+    height: var(--header-height);
+
+    &.fixed {
+      background-color: var(--dark-color);
+    }
+  }
 }
 
 .header-app-container {
@@ -24,8 +34,9 @@
   justify-content: flex-start;
 
   .header-app-logo {
-    animation: header-logo-spin infinite 20s linear;
+    // animation: header-logo-spin infinite 20s linear;
     height: 10vmin;
+    padding: 20px;
   }
 }
 
@@ -34,12 +45,16 @@
   flex: 1;
   align-items: center;
   justify-content: flex-end;
-}
 
-.header-nav-menu-icon {
-  visibility: hidden;
-  position: absolute;
-  right: 0;
+  .header-nav-icon-container {
+    visibility: hidden;
+    position: absolute;
+    right: 0;
+
+    .header-nav-icon {
+      max-width: 25px;
+    }
+  }
 }
 
 @keyframes header-logo-spin {

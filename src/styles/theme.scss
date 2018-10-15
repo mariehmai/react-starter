@@ -20,6 +20,7 @@ code {
   display: flex;
   margin: auto;
   flex-direction: column;
+  margin-top: calc(var(--header-height) + 20px);
   max-width: var(--container-width);
 }
 
@@ -47,5 +48,6 @@ h2 {
 
   // Widths
   --container-width: 950px;
+  --header-height: 17vh;
   --headline-font-size: calc(10px + 2vmin);
 }
