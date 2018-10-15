@@ -1,14 +1,11 @@
 @media only screen and (max-width: 750px) {
-  .header-nav-container {
-    display: none;
-    visibility: hidden;
-    flex-direction: column;
-    justify-content: flex-end;
-
+  .header {
+    .header-nav-container {
+      visibility: hidden;
+    }
+    
     .header-nav-menu-icon {
-      display: flex;
       visibility: visible;
-      position: absolute;
     }
   }
 }
@@ -17,10 +14,7 @@
   display: flex;
   align-items: flex-start;
   height: 0.1%;
-
-  background-color: #282c34;
-  min-height: 12vh;
-  font-size: calc(10px + 2vmin);
+  background-color: var(--dark-color);
 }
 
 .header-app-container {
@@ -40,11 +34,12 @@
   flex: 1;
   align-items: center;
   justify-content: flex-end;
+}
 
-  .header-nav-menu-icon {
-    display: none;
-    visibility: hidden;
-  }
+.header-nav-menu-icon {
+  visibility: hidden;
+  position: absolute;
+  right: 0;
 }
 
 @keyframes header-logo-spin {
