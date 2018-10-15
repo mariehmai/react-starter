@@ -5,7 +5,14 @@ export default [
     path: '/aboutus',
     name: 'About us',
     exact: true,
-    component: Header
+    component: Header,
+    submenu: [
+      {
+        path: '/team',
+        name: 'The team',
+        exact: true
+      }
+    ]
   },
   {
     path: '/services',
@@ -17,6 +24,23 @@ export default [
     path: '/events',
     name: 'Incoming events',
     exact: true,
-    component: Header
+    component: Header,
+    submenu: [
+      {
+        path: '/worldcup',
+        name: 'Word Cup',
+        exact: true
+      },
+      {
+        path: '/tournaments',
+        name: 'Tournaments',
+        exact: true
+      },
+      {
+        path: '/games',
+        name: 'Games',
+        exact: true
+      }
+    ]
   }
 ]

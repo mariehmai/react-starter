@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { object } from 'prop-types'
+import { object, func } from 'prop-types'
 import { withRouter } from 'react-router'
 import { FormattedMessage } from 'react-intl'
 import Button from '@material-ui/core/Button'
@@ -28,7 +28,7 @@ class Header extends Component {
   }
 
   render() {
-    const { history } = this.props
+    const { history, showSideMenu } = this.props
     const { isTop } = this.state
 
     return (
@@ -41,17 +41,19 @@ class Header extends Component {
             </h2>
           </div>
           <div className="header-nav-container">
-            {routes.map(r => (
-              <Button
-                className="nav"
-                key={`${r.name}-id`}
-                onClick={() => history.push(r.path)}
-              >
-                {r.name}
-              </Button>
+            {routes.map((r, idx) => (
+              <div key={`${r.name}-div-d`}>
+                <Button
+                  className="nav"
+                  key={`${r.name}-btn-id`}
+                  onClick={() => history.push(r.path)}
+                >
+                  {r.name}
+                </Button>
+              </div>
             ))}
             <div className="header-nav-icon-container">
-              <Button onClick={() => {}}>
+              <Button onClick={showSideMenu}>
                 <img className="header-nav-icon" src={menuIcon} alt="" />
               </Button>
             </div>
@@ -63,7 +65,8 @@ class Header extends Component {
 }
 
 Header.propTypes = {
-  history: object.isRequired
+  history: object.isRequired,
+  showSideMenu: func.isRequired
 }
 
 export default withRouter(Header)

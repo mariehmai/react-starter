@@ -9,6 +9,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: var(--light-color);
 }
 
 code {
@@ -16,17 +17,12 @@ code {
     monospace;
 }
 
-.container {
-  display: flex;
-  margin: auto;
-  flex-direction: column;
-  margin-top: calc(var(--header-height) + 20px);
-  max-width: var(--container-width);
-}
-
 button {
   &.nav {
-    color: var(--white-color);
+    color: var(--light-color);
+    font-weight: lighter;
+    text-transform: none;
+    font-size: var(--header-font-size);
   }
 }
 
@@ -37,17 +33,34 @@ h2 {
   }
 
   &.nav {
-    color: var(--white-color);
+    color: var(--light-color);
   }
+}
+
+.container {
+  display: flex;
+  margin: auto;
+  flex-direction: column;
+  margin-top: var(--header-height);
+  max-width: var(--container-width);
+}
+
+.link {
+  cursor: pointer;
+  color: var(--primary-color);
 }
 
 :root {
   // Colors
+  --primary-color: #1c92d2;
+  --secondary-color: #f2fcfe;
+  --light-color: #fafafa;
   --white-color: white;
   --dark-color: #282c34;
 
   // Widths
   --container-width: 950px;
   --header-height: 17vh;
+  --header-font-size: calc(8px + 2vmin);
   --headline-font-size: calc(10px + 2vmin);
 }
