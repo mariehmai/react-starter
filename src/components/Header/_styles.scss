@@ -1,3 +1,18 @@
+@media only screen and (max-width: 750px) {
+  .header-nav-container {
+    display: none;
+    visibility: hidden;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    .header-nav-menu-icon {
+      display: flex;
+      visibility: visible;
+      position: absolute;
+    }
+  }
+}
+
 .header {
   display: flex;
   align-items: flex-start;
@@ -25,6 +40,11 @@
   flex: 1;
   align-items: center;
   justify-content: flex-end;
+
+  .header-nav-menu-icon {
+    display: none;
+    visibility: hidden;
+  }
 }
 
 @keyframes header-logo-spin {
