@@ -1,4 +1,6 @@
 @import '../containers/App/styles';
+@import '../components/Header/styles';
+@import '../components/Separator/styles';
 
 body {
   margin: 0;
@@ -8,9 +10,58 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: var(--light-color);
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+button {
+  &.nav {
+    color: var(--light-color);
+    font-weight: lighter;
+    text-transform: none;
+    font-size: var(--header-font-size);
+  }
+}
+
+h2 {
+  &.headline {
+    font-size: var(--headline-font-size);
+  }
+
+  &.nav {
+    color: var(--light-color);
+  }
+}
+
+.container {
+  display: flex;
+  margin: auto;
+  flex-direction: column;
+  margin-top: var(--header-height);
+  max-width: var(--container-width);
+}
+
+.link {
+  cursor: pointer;
+  color: var(--primary-color);
+}
+
+:root {
+  // Colors
+  --primary-color: #1c92d2;
+  --secondary-color: #f2fcfe;
+  --light-color: #fafafa;
+  --white-color: white;
+  --dark-color: #282c34;
+
+  // Widths
+  --container-width: 950px;
+  --header-height: 14vh;
+  --header-font-size: calc(5px + 2vmin);
+  --headline-font-size: calc(10px + 2vmin);
+  --space-bottom-separator: 30px;
 }

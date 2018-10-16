@@ -3,14 +3,15 @@
   "plugins": ["prettier"],
   "rules": {
     "prettier/prettier": "error",
-    "prefer-const": 2,
     "no-var": 2,
+    "prefer-const": 2,
     "prefer-arrow-callback": 2,
     "arrow-body-style": 2,
-    "react/no-unused-prop-types": 0,
     "import/no-unresolved": 2,
+    "import/newline-after-import": "error",
+    "react/no-unused-prop-types": 0,
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
-    "import/newline-after-import": "error"
+    "react/forbid-prop-types": [1, { "forbid": [], "checkContextTypes": true, "checkChildContextTypes": true }]
   },
   "globals": {
     "window": true,
