@@ -8,12 +8,12 @@
     display: flex;
     flex: 1;
     height: var(--header-height);
-    opacity: 0.5;
+    opacity: 1;
     background-color: var(--dark-color);
     transition: visibility 0s 0.5s, opacity 0.5s linear;
 
     &.fixed {
-      opacity: 1;
+      opacity: 0.5;
       transition: opacity 0.5s linear;
     }
   }
@@ -21,10 +21,11 @@
 
 .header-app-container {
   display: flex;
-  flex: 1;
+  // flex: 1;
   align-items: center;
   justify-content: flex-start;
   opacity: 1;
+  padding-right: 20px;
 
   &:hover {
     cursor: pointer;

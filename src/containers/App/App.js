@@ -11,6 +11,7 @@ import {
 
 import routes from './routes'
 import Header from '../../components/Header'
+import Footer from '../../components/Footer'
 
 // Add the icons to FontAwesome library
 library.add(faGhost, faVolleyballBall, faGolfBall, faTableTennis, faQuidditch)
@@ -30,7 +31,7 @@ class App extends Component {
             />
           ))}
         </Switch>
-        <div className="container" />
+        <Footer />
       </div>
     )
   }
