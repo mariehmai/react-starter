@@ -6,15 +6,24 @@ import {
   faVolleyballBall,
   faGolfBall,
   faTableTennis,
-  faQuidditch
+  faQuidditch,
+  faSpinner
 } from '@fortawesome/free-solid-svg-icons'
 
 import routes from './routes'
+import Loading from '../../components/Loading'
 import Header from '../../components/Header'
 import Footer from '../../components/Footer'
 
 // Add the icons to FontAwesome library
-library.add(faGhost, faVolleyballBall, faGolfBall, faTableTennis, faQuidditch)
+library.add(
+  faGhost,
+  faVolleyballBall,
+  faGolfBall,
+  faTableTennis,
+  faQuidditch,
+  faSpinner
+)
 
 class App extends Component {
   render() {
@@ -31,6 +40,7 @@ class App extends Component {
             />
           ))}
         </Switch>
+        <Loading />
         <Footer />
       </div>
     )
