@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { object } from 'prop-types'
 import { withRouter } from 'react-router'
 import { FormattedMessage } from 'react-intl'
-import Button from '@material-ui/core/Button'
+import { Button } from 'semantic-ui-react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 import routes from '../../containers/App/routes'
@@ -43,9 +43,9 @@ class Header extends Component {
         <div className={`header-content ${!isTop && 'fixed'}`}>
           <div className="header-app-container" onClick={this.navigate('/')}>
             <img src={logo} className="header-app-logo" alt="app-logo" />
-            <h2 className="headline nav">
+            <p className="headline nav">
               <FormattedMessage id="app.title" />
-            </h2>
+            </p>
           </div>
           <div className="header-nav-container">
             {routes.map(
@@ -53,6 +53,7 @@ class Header extends Component {
                 route.main && (
                   <div key={`${route.name}-div-d`}>
                     <Button
+                      color="blue"
                       className="nav"
                       key={`${route.name}-btn-id`}
                       onClick={() => history.push(route.path)}
@@ -62,10 +63,8 @@ class Header extends Component {
                   </div>
                 )
             )}
-            <div className="header-nav-icon-container">
-              <Button onClick={this.toggleMenu}>
-                <img className="header-nav-icon" src={menuIcon} alt="" />
-              </Button>
+            <div className="header-nav-icon-container" onClick={this.toggleMenu}>
+              <img className="header-nav-icon" src={menuIcon} alt="" />
             </div>
           </div>
         </div>

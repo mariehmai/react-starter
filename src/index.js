@@ -6,6 +6,7 @@ import { createHttpLink } from 'apollo-link-http'
 import { InMemoryCache } from 'apollo-cache-inmemory'
 import { BrowserRouter } from 'react-router-dom'
 import { IntlProvider } from 'react-intl'
+import 'semantic-ui-css/semantic.min.css'
 
 import App from './containers/App/App'
 import * as serviceWorker from './serviceWorker'

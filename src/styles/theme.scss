@@ -23,14 +23,14 @@ code {
 button {
   &.nav {
     color: var(--light-color);
-    font-weight: lighter;
     text-transform: none;
     font-size: var(--header-font-size);
   }
 }
 
-h2 {
+p {
   &.headline {
+    font-weight: lighter;
     font-size: var(--headline-font-size);
   }
 
@@ -65,5 +65,6 @@ h2 {
   --header-height: 14vh;
   --header-font-size: calc(5px + 2vmin);
   --headline-font-size: calc(10px + 2vmin);
+  --space-border: 30px;
   --space-bottom-separator: 30px;
 }
