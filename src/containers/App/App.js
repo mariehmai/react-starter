@@ -11,7 +11,6 @@ import {
 } from '@fortawesome/free-solid-svg-icons'
 
 import routes from './routes'
-import Loading from '../../components/Loading'
 import Header from '../../components/Header'
 import Footer from '../../components/Footer'
 
@@ -28,7 +27,7 @@ library.add(
 class App extends Component {
   render() {
     return (
-      <div className="app">
+      <div className='app'>
         <Header />
         <Switch>
           {routes.map(r => (
@@ -40,7 +39,6 @@ class App extends Component {
             />
           ))}
         </Switch>
-        <Loading />
         <Footer />
       </div>
     )

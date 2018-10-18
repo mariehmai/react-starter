@@ -1,4 +1,5 @@
 @import '../containers/App/styles';
+@import '../containers/Events/styles';
 @import '../components/Header/styles';
 @import '../components/Footer/styles';
 @import '../components/Separator/styles';
@@ -28,6 +29,12 @@ button {
   }
 }
 
+h2 {
+  &.headline {
+    margin: 2.5em 0 1.5em 0;
+  }
+}
+
 p {
   &.headline {
     font-weight: lighter;
@@ -40,11 +47,9 @@ p {
 }
 
 .container {
-  display: flex;
-  margin: auto;
+  flex: 1;
   flex-direction: column;
-  margin-top: var(--header-height);
-  max-width: var(--container-width);
+  margin: calc(var(--header-height) + 4em) 0 4em 0;
 }
 
 .link {
@@ -65,6 +70,6 @@ p {
   --header-height: 14vh;
   --header-font-size: calc(5px + 2vmin);
   --headline-font-size: calc(10px + 2vmin);
-  --space-border: 30px;
+  --space-border: 1em;
   --space-bottom-separator: 30px;
 }

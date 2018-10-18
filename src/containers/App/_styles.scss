@@ -1,18 +1,7 @@
 .app {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   flex: 1;
-  text-align: center;
   min-height: 100vh;
-
-  .app-background {
-    position: absolute;
-    top: 0;
-    left: 0;
-    max-width: 100%;
-    z-index: -1;
-  }
-
-  .container {
-  }
 }

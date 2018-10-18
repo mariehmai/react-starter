@@ -1,58 +1,58 @@
-import Header from '../../components/Header'
+import Events from '../Events/index'
 
 export default [
   {
     path: '/',
-    name: 'Home',
+    intlId: 'nav.home',
     exact: true,
-    component: Header,
+    component: Events,
     icon: 'quidditch',
     last: true
   },
   {
     path: '/aboutus',
-    name: 'About us',
+    intlId: 'nav.aboutus',
     exact: true,
-    component: Header,
+    component: Events,
     icon: 'ghost',
     main: true,
     submenu: [
       {
         path: '/team',
-        name: 'The team',
+        intlId: 'The team',
         exact: true
       }
     ]
   },
   {
     path: '/services',
-    name: 'Services',
+    intlId: 'nav.services',
     exact: true,
-    component: Header,
+    component: Events,
     icon: 'table-tennis',
     main: true
   },
   {
     path: '/events',
-    name: 'Incoming events',
+    intlId: 'nav.events',
     exact: true,
-    component: Header,
+    component: Events,
     icon: 'volleyball-ball',
     main: true,
     submenu: [
       {
         path: '/worldcup',
-        name: 'Word Cup',
+        intlId: 'Word Cup',
         exact: true
       },
       {
-        path: '/tournaments',
-        name: 'Tournaments',
+        path: '/tourintlIdnts',
+        intlId: 'TourintlIdnts',
         exact: true
       },
       {
         path: '/games',
-        name: 'Games',
+        intlId: 'Games',
         exact: true
       }
     ],
@@ -60,9 +60,9 @@ export default [
   },
   {
     path: '/contact',
-    name: 'Contact',
+    intlId: 'nav.contact',
     exact: true,
-    component: Header,
+    component: Events,
     icon: 'golf-ball'
   }
 ]
