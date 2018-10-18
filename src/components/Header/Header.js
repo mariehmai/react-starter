@@ -39,43 +39,42 @@ class Header extends Component {
     const { isTop, showMenu } = this.state
 
     return (
-      <div className="header">
-        <div className={`header-content ${!isTop && 'fixed'}`}>
-          <div className="header-app-container" onClick={this.navigate('/')}>
-            <img src={logo} className="header-app-logo" alt="app-logo" />
-            <p className="headline nav">
-              <FormattedMessage id="app.title" />
+      <div className='header'>
+        <div className={`header-content ${!isTop && 'not-top'}`}>
+          <div className='header-app-container' onClick={this.navigate('/')}>
+            <img src={logo} className='header-app-logo' alt='app-logo' />
+            <p className='headline nav'>
+              <FormattedMessage id='app.title' />
             </p>
           </div>
-          <div className="header-nav-container">
+          <div className='header-nav-container'>
             {routes.map(
               route =>
                 route.main && (
-                  <div key={`${route.name}-div-d`}>
+                  <div key={`${route.intlId}-div-d`}>
                     <Button
-                      color="blue"
-                      className="nav"
-                      key={`${route.name}-btn-id`}
+                      color='blue'
+                      className='nav'
                       onClick={() => history.push(route.path)}
                     >
-                      {route.name}
+                      <FormattedMessage id={route.intlId} />
                     </Button>
                   </div>
                 )
             )}
-            <div className="header-nav-icon-container" onClick={this.toggleMenu}>
-              <img className="header-nav-icon" src={menuIcon} alt="" />
+            <div className='header-nav-icon-container' onClick={this.toggleMenu}>
+              <img className='header-nav-icon' src={menuIcon} alt='' />
             </div>
           </div>
         </div>
         {showMenu && (
-          <div className="app-menu">
+          <div className='app-menu'>
             {routes.map(route => (
-              <div key={route.name} className="app-menu-item">
-                <div className="app-menu-item-container">
-                  <div className="app-menu-item-header">
-                    {route.name}
-                    <FontAwesomeIcon icon={route.icon} size="lg" />
+              <div key={route.intlId} className='app-menu-item'>
+                <div className='app-menu-item-container'>
+                  <div className='app-menu-item-header'>
+                    <FormattedMessage id={route.intlId} />
+                    <FontAwesomeIcon icon={route.icon} size='lg' />
                   </div>
                   {route.last && <Separator />}
                 </div>

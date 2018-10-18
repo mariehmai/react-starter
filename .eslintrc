@@ -1,8 +1,11 @@
 {
+  // "env": {
+	// 	"es6": true,
+	// 	"node": true
+	// },
   "extends": ["airbnb", "prettier", "prettier/react"],
   "plugins": ["prettier"],
   "rules": {
-    "prettier/prettier": "error",
     "no-var": 2,
     "prefer-const": 2,
     "prefer-arrow-callback": 2,

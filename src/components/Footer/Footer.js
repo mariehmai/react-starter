@@ -4,11 +4,11 @@ import { FormattedMessage } from 'react-intl'
 import logo from '../../assets/logo.svg'
 
 const Footer = () => (
-  <div className="footer">
-    <div className="footer-content">
-      <img className="footer-app-logo" src={logo} alt="" />
+  <div className='footer'>
+    <div className='footer-content'>
+      <img className='footer-app-logo' src={logo} alt='' />
       <p>
-        © <FormattedMessage id="app.title" /> | MHM
+        © <FormattedMessage id='app.title' /> | MHM
       </p>
     </div>
   </div>
