@@ -1,75 +1,63 @@
 import React, { Component } from 'react'
 import { Container, Card, Image } from 'semantic-ui-react'
+import { Query } from 'react-apollo'
+import gql from 'graphql-tag'
 
 import logo from '../../assets/logo.svg'
 
-const events = [
+const EVENTS_QUERY = gql`
   {
-    id: 1,
-    name: 'World Cup Phase 1',
-    description: 'Finals France - Belgium...',
-    location: 'Russia',
-    date: new Date().toDateString()
-  },
-  {
-    id: 2,
-    name: 'World Cup Quarter',
-    description: 'Finals France - Belgium...',
-    location: 'Russia',
-    date: new Date().toDateString()
-  },
-  {
-    id: 3,
-    name: 'World Cup Semi-finals',
-    description: 'Finals France - Belgium...',
-    location: 'Russia',
-    date: new Date().toDateString()
-  },
-  {
-    id: 4,
-    name: 'World Cup Finals',
-    description: 'Finals France - Belgium...',
-    location: 'Russia',
-    date: new Date().toDateString()
-  },
-  {
-    id: 5,
-    name: 'World Cup Semi',
-    description: 'Finals France - Belgium...',
-    location: 'Russia',
-    date: new Date().toDateString()
-  },
-]
+    events {
+      id
+      name
+      description
+      location
+      date
+    }
+  }
+`
 
-class Events extends Component {  
- 
-  showEvents = () => 
+class Events extends Component {
+  showEvents = events => (
     <div>
-      <h2 className='headline'>Incoming events</h2>
+      <h2 className="headline">Incoming events</h2>
       <Card.Group>
-        {events.map(event => (  
-          <Card key={event.id}>
-            <Card.Content>
-              <Image floated='right' size='mini' src={logo} />
-              <h3>{event.name}</h3>
-              <Card.Meta>{event.date}</Card.Meta>
-              <Card.Description>
-                {event.description}
-              </Card.Description>
-            </Card.Content>
-          </Card>
-        ))}
+        {events.map(event => {
+          const date = new Date(event.date).toDateString()
+          return (
+            <Card key={event.id}>
+              <Card.Content>
+                <Image floated="right" size="mini" src={logo} />
+                <h3>{event.name}</h3>
+                <Card.Meta>{date}</Card.Meta>
+                <Card.Description>{event.description}</Card.Description>
+              </Card.Content>
+            </Card>
+          )
+        })}
       </Card.Group>
     </div>
+  )
 
   render() {
     return (
-    <div className='events'>
-      <Container className='container'>
-        {this.showEvents()}
-        {this.showEvents()}
-      </Container>
-    </div>
-  )}
+      <Query query={EVENTS_QUERY}>
+        {({ loading, error, data }) => {
+          if (loading) return <div>Fetching</div>
+          if (error) return <div>Error</div>
+
+          const events = data.events
+
+          return (
+            <div className="events">
+              <Container className="container">
+                {this.showEvents(events)}
+              </Container>
+            </div>
+          )
+        }}
+      </Query>
+    )
+  }
 }
 export default Events
