@@ -1,11 +1,15 @@
-import Events from '../Events/index'
+import Home from '../Home'
+import Events from '../Events'
+import AboutUs from '../AboutUs'
+import Services from '../Services'
+import Contact from '../Contact'
 
 export default [
   {
     path: '/',
     intlId: 'nav.home',
     exact: true,
-    component: Events,
+    component: Home,
     icon: 'quidditch',
     last: true
   },
@@ -13,7 +17,8 @@ export default [
     path: '/aboutus',
     intlId: 'nav.aboutus',
     exact: true,
-    component: Events,
+    component: AboutUs
+    ,
     icon: 'ghost',
     main: true,
     submenu: [
@@ -28,7 +33,7 @@ export default [
     path: '/services',
     intlId: 'nav.services',
     exact: true,
-    component: Events,
+    component: Services,
     icon: 'table-tennis',
     main: true
   },
@@ -62,7 +67,7 @@ export default [
     path: '/contact',
     intlId: 'nav.contact',
     exact: true,
-    component: Events,
+    component: Contact,
     icon: 'golf-ball'
   }
 ]
