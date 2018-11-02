@@ -2,7 +2,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ---
 
-# graphql-js-starter
+# sarl-bonnevial
 
 ## Start the project
 
