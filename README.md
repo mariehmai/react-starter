@@ -18,5 +18,5 @@ cd sarl-bonnevial/
 
 ```
 npm install           // or yarn
-yarn start
+npm run start         // or yarn start
 ```
