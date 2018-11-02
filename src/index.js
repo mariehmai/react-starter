@@ -1,9 +1,5 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { ApolloProvider } from 'react-apollo'
-import { ApolloClient } from 'apollo-client'
-import { createHttpLink } from 'apollo-link-http'
-import { InMemoryCache } from 'apollo-cache-inmemory'
 import { BrowserRouter } from 'react-router-dom'
 import { IntlProvider } from 'react-intl'
 import 'semantic-ui-css/semantic.min.css'
@@ -16,23 +12,12 @@ import { language, translations } from './translations/i18n'
 // `dotenv` config
 require('dotenv').config()
 
-// GraphQL config
-const httpLink = createHttpLink({
-  uri: process.env.REACT_APP_GRAPHQL_API_URL
-})
-const client = new ApolloClient({
-  link: httpLink,
-  cache: new InMemoryCache()
-})
-
 ReactDOM.render(
-  <ApolloProvider client={client}>
-    <IntlProvider locale={language} messages={translations[language]}>
-      <BrowserRouter>
-        <App />
-      </BrowserRouter>
-    </IntlProvider>
-  </ApolloProvider>,
+  <IntlProvider locale={language} messages={translations[language]}>
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
+  </IntlProvider>,
   document.getElementById('root')
 )
 
