@@ -2,10 +2,10 @@ import React from 'react'
 import { Container } from 'semantic-ui-react'
 import { FormattedMessage } from 'react-intl'
 
-const Services = () => 
-  <div className='services'>
+const Equipe = () =>
+  <div className='equipe'>
     <Container className='container'>
-      <h2><FormattedMessage id='services.title' /></h2>
+      <h2><FormattedMessage id='equipe.title' /></h2>
       <div class='ui grid'>
         <div class='six wide column'>
           <img src='img/test.jpg' alt="" />
@@ -17,4 +17,4 @@ const Services = () =>
     </Container>
   </div>
 
-export default Services
+export default Equipe
