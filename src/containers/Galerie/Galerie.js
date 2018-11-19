@@ -1,33 +1,28 @@
 import React from 'react'
-import { Container } from 'semantic-ui-react'
+import { Container, Card } from 'semantic-ui-react'
 import { FormattedMessage } from 'react-intl'
 
-const Galerie = () =>
-  <div className='galerie'>
-    <Container className='container'>
-      <h2><FormattedMessage id='galerie.title' /></h2>
-      <div class="ui three column grid">
-        <div class="column">
-          <div class="ui segment"><img /></div>
-          <div class="ui segment"><img /></div>
-          <div class="ui segment"><img /></div>
-          <div class="ui segment"><img /></div>
-        </div>
-        <div class="column">
-          <div class="ui segment"><img /></div>
-          <div class="ui segment"><img /></div>
-          <div class="ui segment"><img /></div>
-          <div class="ui segment"><img /></div>
-        </div>
-        <div class="column">
-          <div class="ui segment"><img /></div>
-          <div class="ui segment"><img /></div>
-          <div class="ui segment"><img /></div>
-          <div class="ui segment"><img /></div>
-        </div>
-      </div>
-    </Container>
-    
-  </div>
 
-export default Galerie
+const src = '/../../assets/noebonnevial.jpg'
+
+const Gallery = () => (
+  <Container>
+    <h2><FormattedMessage id='galerie.title' /></h2>
+    <Card.Group itemsPerRow={4}>
+      <Card color='brown' image={src} />
+      <Card color='olive' image={src} />
+      <Card color='brown' image={src} />
+      <Card color='olive' image={src} />
+      <Card color='brown' image={src} />
+      <Card color='olive' image={src} />
+      <Card color='brown' image={src} />
+      <Card color='olive' image={src} />
+      <Card color='brown' image={src} />
+      <Card color='olive' image={src} />
+      <Card color='brown' image={src} />
+      <Card color='olive' image={src} />
+    </Card.Group>
+  </Container>
+)
+
+export default Gallery
