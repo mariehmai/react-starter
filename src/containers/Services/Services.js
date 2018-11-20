@@ -1,20 +1,42 @@
 import React from 'react'
 import { Container } from 'semantic-ui-react'
+import { Grid, Image } from 'semantic-ui-react'
 import { FormattedMessage } from 'react-intl'
 
-const Services = () => 
-  <div className='services'>
-    <Container className='container'>
-      <h2><FormattedMessage id='services.title' /></h2>
-      <div class='ui grid'>
-        <div class='six wide column'>
-          <img src='img/test.jpg' alt="" />
-        </div>
-        <div class='ten wide column'>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ullamcorper commodo nisi vel commodo. Suspendisse gravida purus risus, id aliquet elit vulputate et. Vivamus ut dignissim lacus. Suspendisse at pulvinar justo, et sagittis erat. Praesent tincidunt urna lorem, vitae euismod lectus pulvinar ut. Morbi tincidunt porta sem, et vestibulum nunc congue eget. Donec vitae tortor vitae leo pretium pretium. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Integer dictum porttitor suscipit. Ut blandit, ex vel ultricies tempus, elit urna fermentum arcu, ac suscipit mi dui ut dui. Ut rhoncus justo quis justo tempus pulvinar. Proin malesuada blandit ante, a pulvinar eros vulputate ac. Cras ac ornare lectus.</p>
-        </div>
-      </div>
-    </Container>
-  </div>
+const treeImg = require('../../assets/tree.jpg')
+
+const Services = () =>
+  <Grid columns={2}>
+    <Grid.Row>
+      <Grid.Column width={6}>
+        <Image src={treeImg} />
+      </Grid.Column>
+      <Grid.Column width={10}>
+        <Container>
+          <h2><FormattedMessage id='services.title' /></h2>
+          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
+      Aenean massa strong. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur
+      ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla
+      consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.
+      In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede
+      link mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean
+      vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac,
+      enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla
+      ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue.
+      Curabitur ullamcorper ultricies nisi.</p>
+          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
+      Aenean massa strong. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur
+      ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla
+      consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.
+      In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede
+      link mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean
+      vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac,
+      enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla
+      ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue.
+      Curabitur ullamcorper ultricies nisi.</p>
+        </Container>
+      </Grid.Column>
+    </Grid.Row>
+  </Grid>
 
 export default Services
