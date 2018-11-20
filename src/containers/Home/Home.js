@@ -6,32 +6,42 @@ const machine = require('../../assets/machine.jpg')
 
 
 export default class Home extends Component {
-  state = {}
+  state = { 
+    activeLeft: false,
+    activeRight: false,
+  }
 
-  handleShow = () => this.setState({ active: true })
-  handleHide = () => this.setState({ active: false })
+  handleShowLeft = () => this.setState({ activeLeft: true })
+  handleHideLeft = () => this.setState({ activeLeft: false })
+  handleShowRight = () => this.setState({ activeRight: true })
+  handleHideRight = () => this.setState({ activeRight: false })
 
   render() {
-    const { active } = this.state
-    const content = (
+    const { activeLeft, activeRight } = this.state
+    const contentLeft = (
       <div>
         <h2>Exploitation agricole</h2>
-        <Button primary>Add</Button>
+        <Button>View</Button>
+      </div>
+    )
+    const contentRight = (
+      <div>
+        <h2>Exploitation forestière</h2>
         <Button>View</Button>
       </div>
     )
 
     return (
-      <div className='home'>
-        <Grid columns={2} divided centered>
+      <Container className='home'>
+        <Grid columns={2} divided>
           <Grid.Row>
-            <Grid.Column className='home-column'>
+            <Grid.Column className='home-column' >
               <Dimmer.Dimmable
                 as={Image}
-                dimmed={active}
-                dimmer={{ active, content }}
-                onMouseEnter={this.handleShow}
-                onMouseLeave={this.handleHide}
+                dimmed={activeLeft}
+                dimmer={{ active: activeLeft, content: contentLeft }}
+                onMouseEnter={this.handleShowLeft}
+                onMouseLeave={this.handleHideLeft}
                 size='medium'
                 src={treeImg}
               />
@@ -39,17 +49,17 @@ export default class Home extends Component {
             <Grid.Column className='home-column'>
               <Dimmer.Dimmable
                 as={Image}
-                dimmed={active}
-                dimmer={{ active, content }}
-                onMouseEnter={this.handleShow}
-                onMouseLeave={this.handleHide}
+                dimmed={activeRight}
+                dimmer={{ active: activeRight, content: contentRight }}
+                onMouseEnter={this.handleShowRight}
+                onMouseLeave={this.handleHideRight}
                 size='medium'
                 src={machine}
               />
             </Grid.Column>
           </Grid.Row>
         </Grid>
-      </div>
+      </Container>
     )
   }
 }
