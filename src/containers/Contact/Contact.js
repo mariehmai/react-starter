@@ -1,39 +1,29 @@
 import React from 'react'
-import { Container } from 'semantic-ui-react'
+import { Container, Grid, Menu } from 'semantic-ui-react'
 import { FormattedMessage } from 'react-intl'
 
-const Contact = () => 
-  <div className='about-us'>
-    <Container className='container'>
-      <h2><FormattedMessage id='contact.title' /></h2>
-      <div class='ui four column grid'>
-        <div class='row'>
-          <div class='column'></div>
-          <div class='column'><h2>Thibaut Bonnevial</h2></div>
-          <div class='column'><h2>Noé Bonnevial</h2></div>
-          <div class='column'></div>
-        </div>
-        <div class='row'>
-          <div class='column'></div>
-          <div class='column'><p>06.06.06.06.06</p></div>
-          <div class='column'><p>06.06.06.06.06</p></div>
-          <div class='column'></div>
-        </div>
-        <div class='row'>
-          <div class='column'></div>
-          <div class='column'><p>thibaud.bonnevial@gmail.com</p></div>
-          <div class='column'><p>noe.bonnevial@gmail.com</p></div>
-          <div class='column'></div>
-        </div>
-        <div class='row'>
-          <div class='column'></div>
-          <div class='column'><p>Big bro</p></div>
-          <div class='column'><p>Little bro</p></div>
-          <div class='column'></div>
-        </div>
-      </div>
-    </Container>
-  </div>
-    
+const Contact = () => (
+  <Container>
+    <h2><FormattedMessage id='contact.title' /></h2>
+    <Grid centered>
+      <Grid.Row columns={2}>
+        <Grid.Column textAlign='center'>
+          <Menu fluid vertical>
+            <Menu.Item className='header'>Thibaud Bonnevial</Menu.Item>
+            <Menu.Item>06.06.06.06.06</Menu.Item>
+            <Menu.Item>thibaud.bonnevial@gmail.com</Menu.Item>
+          </Menu>
+        </Grid.Column>
+        <Grid.Column textAlign='center'>
+          <Menu fluid vertical>
+            <Menu.Item className='header'>Noe Bonnevial</Menu.Item>
+            <Menu.Item>06.06.06.06.06</Menu.Item>
+            <Menu.Item>noe.bonnevial@gmail.com</Menu.Item>
+          </Menu>
+        </Grid.Column>
+      </Grid.Row>
+    </Grid>
+  </Container>
+)
 
 export default Contact
