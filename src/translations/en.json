@@ -4,12 +4,12 @@
   "nav.aboutus": "About us",
   "nav.events": "Incoming events",
   "nav.services": "Services",
-  "nav.equipe": "Equipe",
+  "nav.team": "Equipe",
   "nav.galerie": "Galerie",
   "nav.contact": "Contacts",
   "aboutus.title": "About us",
   "services.title": "Services",
-  "equipe.title": "Notre équipe",
+  "team.title": "Notre équipe",
   "galerie.title": "Galerie",
   "contact.title": "Contacts"
 }

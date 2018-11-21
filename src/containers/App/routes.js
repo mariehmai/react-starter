@@ -2,7 +2,7 @@ import Home from '../Home'
 import Events from '../Events'
 import AboutUs from '../AboutUs'
 import Services from '../Services'
-import Equipe from '../Equipe'
+import Team from '../Team'
 import Galerie from '../Galerie'
 import Contact from '../Contact'
 
@@ -74,10 +74,10 @@ export default [
     main: true
   },
   {
-    path: '/equipe',
-    intlId: 'nav.equipe',
+    path: '/team',
+    intlId: 'nav.team',
     exact: true,
-    component: Equipe,
+    component: Team,
     main: true,
     icon: 'golf-ball'
   },

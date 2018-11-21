@@ -8,7 +8,7 @@ const smith = require('../../assets/smith.jpg')
 
 const Team = () => (
   <Container>
-    <h2><FormattedMessage id='equipe.title' /></h2>
+    <h2><FormattedMessage id='team.title' /></h2>
     <Card.Group centered items>
       <Card>
         <Card.Content>
