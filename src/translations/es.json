@@ -10,6 +10,15 @@
   "aboutus.title": "About us",
   "services.title": "Services",
   "team.title": "Notre équipe",
+  "team.first.boss": "M. Thibaud Bonnevial",
+  "team.first.boss.meta": "Noé's brother",
+  "team.first.boss.description": "Tree killer",
+  "team.second.boss": "M. Noé Bonnevial",
+  "team.second.boss.meta": "Thibaud's brother",
+  "team.second.boss.description": "Tree healer",
+  "team.employee": "M. Smith",
+  "team.employee.meta": "Bonnevial's employee",
+  "team.employee.description": "Tree lover",
   "galerie.title": "Galerie",
   "contact.title": "Contacts"
 }

@@ -13,34 +13,34 @@ const Team = () => (
       <Card>
         <Card.Content>
           <Image src={bigBro} alt='' />
-          <Card.Header>Thibaud Bonnevial</Card.Header>
-          <Card.Meta>Noe's Bro</Card.Meta>
+          <Card.Header><FormattedMessage id='team.first.boss' /></Card.Header>
+          <Card.Meta><FormattedMessage id='team.first.boss.meta' /></Card.Meta>
           <Card.Description>Thibaud is a nice guy with long hair</Card.Description>
         </Card.Content>
         <Card.Content extra>
-          <p>Tree killer</p>
+          <FormattedMessage id='team.first.boss.description' />
         </Card.Content>
       </Card>
       <Card>
         <Card.Content>
           <Image src={littleBro} alt='' />
-          <Card.Header>Noe Bonnevial</Card.Header>
-          <Card.Meta>Thibaud's Bro</Card.Meta>
+          <Card.Header><FormattedMessage id='team.second.boss' /></Card.Header>
+          <Card.Meta><FormattedMessage id='team.second.boss.meta' /></Card.Meta>
           <Card.Description>Noe is a nice guy with short hair</Card.Description>
         </Card.Content>
         <Card.Content extra>
-          <p>Tree healer</p>
+          <FormattedMessage id='team.second.boss.description' />
         </Card.Content>
       </Card>
       <Card>
         <Card.Content>
           <Image src={smith} alt='' />
-          <Card.Header>Smith Stan</Card.Header>
-          <Card.Meta>Bonnevial's employee</Card.Meta>
+          <Card.Header><FormattedMessage id='team.employee' /></Card.Header>
+          <Card.Meta><FormattedMessage id='team.employee.meta' /></Card.Meta>
           <Card.Description>Smith is a patient man working with Bonnevial's bros</Card.Description>
         </Card.Content>
         <Card.Content extra>
-          <p>Tree lover</p>
+          <FormattedMessage id='team.employee.description' />
         </Card.Content>
       </Card>
     </Card.Group>
