@@ -3,7 +3,7 @@ import Events from '../Events'
 import AboutUs from '../AboutUs'
 import Services from '../Services'
 import Equipe from '../Equipe'
-import Galerie from '../Galerie'
+import Gallery from '../Gallery'
 import Contact from '../Contact'
 
 export default [
@@ -82,10 +82,10 @@ export default [
     icon: 'golf-ball'
   },
   {
-    path: '/galerie',
-    intlId: 'nav.galerie',
+    path: '/gallery',
+    intlId: 'nav.gallery',
     exact: true,
-    component: Galerie,
+    component: Gallery,
     main: true,
     icon: 'golf-ball'
   },
