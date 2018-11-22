@@ -7,7 +7,7 @@ import Gallery from '../Gallery'
 import Contact from '../Contact'
 
 export default [
-  {
+  /*{
     path: '/',
     intlId: 'nav.home',
     exact: true,
@@ -56,7 +56,7 @@ export default [
       }
     ],
     last: true
-  },
+  },*/
   {
     path: '/home',
     intlId: 'nav.home',
