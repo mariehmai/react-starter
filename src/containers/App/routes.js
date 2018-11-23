@@ -1,6 +1,4 @@
 import Home from '../Home'
-import Events from '../Events'
-import AboutUs from '../AboutUs'
 import Services from '../Services'
 import Equipe from '../Equipe'
 import Gallery from '../Gallery'

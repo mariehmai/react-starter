@@ -1,13 +1,10 @@
 {
   "app.title": "SARL Bonnevial",
   "nav.home": "Accueil",
-  "nav.aboutus": "About us",
-  "nav.events": "Incoming events",
   "nav.services": "Services",
   "nav.equipe": "Equipe",
   "nav.gallery": "Galerie",
   "nav.contact": "Contacts",
-  "aboutus.title": "About us",
   "services.title": "Services",
   "equipe.title": "Notre équipe",
   "gallery.title": "Galerie",
