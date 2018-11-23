@@ -1,13 +1,10 @@
 {
   "app.title": "SARL Bonnevial",
   "nav.home": "Accueil",
-  "nav.aboutus": "About us",
-  "nav.events": "Incoming events",
   "nav.services": "Services",
   "nav.team": "Equipe",
-  "nav.galerie": "Galerie",
+  "nav.gallery": "Galerie",
   "nav.contact": "Contacts",
-  "aboutus.title": "About us",
   "services.title": "Services",
   "team.title": "Notre équipe",
   "team.first.boss": "M. Thibaud Bonnevial",
@@ -19,6 +16,6 @@
   "team.employee": "M. Smith",
   "team.employee.meta": "Bonnevial's employee",
   "team.employee.description": "Tree lover",
-  "galerie.title": "Galerie",
+  "gallery.title": "Galerie",
   "contact.title": "Contacts"
 }

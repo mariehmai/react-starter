@@ -1,13 +1,11 @@
 import Home from '../Home'
-import Events from '../Events'
-import AboutUs from '../AboutUs'
 import Services from '../Services'
 import Team from '../Team'
-import Galerie from '../Galerie'
+import Gallery from '../Gallery'
 import Contact from '../Contact'
 
 export default [
-  {
+  /*{
     path: '/',
     intlId: 'nav.home',
     exact: true,
@@ -56,7 +54,7 @@ export default [
       }
     ],
     last: true
-  },
+  },*/
   {
     path: '/home',
     intlId: 'nav.home',
@@ -82,10 +80,10 @@ export default [
     icon: 'golf-ball'
   },
   {
-    path: '/galerie',
-    intlId: 'nav.galerie',
+    path: '/gallery',
+    intlId: 'nav.gallery',
     exact: true,
-    component: Galerie,
+    component: Gallery,
     main: true,
     icon: 'golf-ball'
   },
