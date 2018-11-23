@@ -1,11 +1,11 @@
 import Home from '../Home'
 import Services from '../Services'
 import Equipe from '../Equipe'
-import Galerie from '../Galerie'
+import Gallery from '../Gallery'
 import Contact from '../Contact'
 
 export default [
-  {
+  /*{
     path: '/',
     intlId: 'nav.home',
     exact: true,
@@ -13,6 +13,48 @@ export default [
     icon: 'quidditch',
     last: true
   },
+  {
+    path: '/aboutus',
+    intlId: 'nav.aboutus',
+    exact: true,
+    component: AboutUs
+    ,
+    icon: 'ghost',
+    main: true,
+    submenu: [
+      {
+        path: '/team',
+        intlId: 'The team',
+        exact: true
+      }
+    ]
+  },
+  {
+    path: '/events',
+    intlId: 'nav.events',
+    exact: true,
+    component: Events,
+    icon: 'volleyball-ball',
+    main: true,
+    submenu: [
+      {
+        path: '/worldcup',
+        intlId: 'Word Cup',
+        exact: true
+      },
+      {
+        path: '/tourintlIdnts',
+        intlId: 'TourintlIdnts',
+        exact: true
+      },
+      {
+        path: '/games',
+        intlId: 'Games',
+        exact: true
+      }
+    ],
+    last: true
+  },*/
   {
     path: '/home',
     intlId: 'nav.home',
@@ -38,10 +80,10 @@ export default [
     icon: 'golf-ball'
   },
   {
-    path: '/galerie',
-    intlId: 'nav.galerie',
+    path: '/gallery',
+    intlId: 'nav.gallery',
     exact: true,
-    component: Galerie,
+    component: Gallery,
     main: true,
     icon: 'golf-ball'
   },

@@ -3,10 +3,10 @@
   "nav.home": "Accueil",
   "nav.services": "Services",
   "nav.equipe": "Equipe",
-  "nav.galerie": "Galerie",
+  "nav.gallery": "Galerie",
   "nav.contact": "Contacts",
   "services.title": "Services",
   "equipe.title": "Notre équipe",
-  "galerie.title": "Galerie",
+  "gallery.title": "Galerie",
   "contact.title": "Contacts"
 }
