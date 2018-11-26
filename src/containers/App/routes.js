@@ -2,7 +2,7 @@ import Home from '../Home'
 import Services from '../Services'
 import Team from '../Team'
 import Gallery from '../Gallery'
-import Contact from '../Contact'
+import Contacts from '../Contacts'
 
 export default [
   /*{
@@ -91,7 +91,7 @@ export default [
     path: '/contact',
     intlId: 'nav.contact',
     exact: true,
-    component: Contact,
+    component: Contacts,
     main: true,
     icon: 'golf-ball'
   }
