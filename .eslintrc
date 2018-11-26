@@ -1,10 +1,11 @@
 {
   // "env": {
-	// 	"es6": true,
-	// 	"node": true
-	// },
+  // 	"es6": true,
+  // 	"node": true
+  // },
   "extends": ["airbnb", "prettier", "prettier/react"],
   "plugins": ["prettier"],
+  "parser": "babel-eslint",
   "rules": {
     "no-var": 2,
     "prefer-const": 2,
@@ -14,7 +15,14 @@
     "import/newline-after-import": "error",
     "react/no-unused-prop-types": 0,
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
-    "react/forbid-prop-types": [1, { "forbid": [], "checkContextTypes": true, "checkChildContextTypes": true }]
+    "react/forbid-prop-types": [
+      1,
+      {
+        "forbid": [],
+        "checkContextTypes": true,
+        "checkChildContextTypes": true
+      }
+    ]
   },
   "globals": {
     "window": true,
