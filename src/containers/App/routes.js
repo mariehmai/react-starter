@@ -56,7 +56,7 @@ export default [
     last: true
   },*/
   {
-    path: '/home',
+    path: '/',
     intlId: 'nav.home',
     exact: true,
     component: Home,
@@ -92,7 +92,7 @@ export default [
     intlId: 'nav.contact',
     exact: true,
     component: Contact,
-    main:true,
+    main: true,
     icon: 'golf-ball'
   }
 ]

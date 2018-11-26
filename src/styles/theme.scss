@@ -33,6 +33,12 @@ button {
   }
 }
 
+h1 {
+  &.title {
+    font-size: 3em;
+  }
+}
+
 h2 {
   &.headline {
     margin: 2.5em 0 1.5em 0;
@@ -50,10 +56,12 @@ p {
   }
 }
 
+// TODO: cleanup
 .container {
-  flex: 1;
-  flex-direction: column;
-  margin: calc(var(--header-height) + 4em) 0 4em 0;
+  // flex: 1;
+  // flex-direction: column;
+  margin-top: var(--header-height);
+  // margin: calc(var(--header-height) + 4em) 0 4em 0;
 }
 
 .link {

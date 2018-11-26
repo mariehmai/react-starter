@@ -1,5 +1,24 @@
 .home {
-    .home-column {
-        max-height: 100%;
+  display: flex;
+  height: calc(100vh - var(--header-height));
+
+  .home-column {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+
+    &.left {
+      background-image: url('../assets/tree.jpg');
     }
+
+    &.right {
+      background-image: url('../assets/machine.jpg');
+    }
+  }
+
+  :hover {
+    opacity: 0.8;
+  }
 }
