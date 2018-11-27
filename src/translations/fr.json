@@ -1,6 +1,9 @@
 {
   "app.title": "SARL Bonnevial",
+  "app.subtitle": "Travaux forestiers et agricoles",
   "nav.home": "Accueil",
+  "nav.agricultural": "Exploitation agricole",
+  "nav.lumbering": "Exploitation forestière",
   "nav.services": "Services",
   "nav.team": "Equipe",
   "nav.gallery": "Galerie",

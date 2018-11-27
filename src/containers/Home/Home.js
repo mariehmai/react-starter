@@ -14,8 +14,9 @@ const contents = [
 ]
 
 class Home extends Component {
-  changeContent = content => event => {
-    // TODO: change global state
+  navigate = path => e => {
+    const { history } = this.props
+    history.push(path)
   }
 
   render() {
@@ -26,7 +27,7 @@ class Home extends Component {
             basic
             inverted
             color="olive"
-            onClick={this.changeContent('agricultural')}
+            onClick={this.navigate('agricultural')}
           >
             <h1 className="title">
               <FormattedMessage id="home.exploitation.agricole" />
@@ -38,7 +39,7 @@ class Home extends Component {
             basic
             inverted
             color="olive"
-            onClick={this.changeContent('lumbering')}
+            onClick={this.navigate('lumbering')}
           >
             <h1 className="title">
               <FormattedMessage id="home.exploitation.forest" />

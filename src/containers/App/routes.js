@@ -64,12 +64,27 @@ export default [
     main: true
   },
   {
-    path: '/services',
-    intlId: 'nav.services',
+    path: '/agricultural',
+    intlId: 'nav.agricultural',
     exact: true,
     component: Services,
     icon: 'table-tennis',
     main: true
+  },
+  {
+    path: '/lumbering',
+    intlId: 'nav.lumbering',
+    exact: true,
+    component: Services,
+    icon: 'table-tennis',
+    main: true
+  },
+  {
+    path: '/services',
+    intlId: 'nav.services',
+    exact: true,
+    component: Services,
+    icon: 'table-tennis'
   },
   {
     path: '/team',
