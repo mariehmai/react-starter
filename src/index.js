@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom'
 import { BrowserRouter } from 'react-router-dom'
 import { IntlProvider } from 'react-intl'
 import 'semantic-ui-css/semantic.min.css'
+import 'react-image-gallery/styles/css/image-gallery.css'
 
 import App from './containers/App/App'
 import * as serviceWorker from './serviceWorker'
