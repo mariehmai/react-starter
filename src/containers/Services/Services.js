@@ -23,7 +23,6 @@ const panels = [
       content: (
         <Message
           color="olive"
-          header="Plus d'info"
           content="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
           commodo ligula eget dolor. Aenean massa strong. Cum sociis natoque
           penatibus et magnis dis parturient montes, nascetur ridiculus mus.
@@ -54,7 +53,6 @@ const panels = [
       content: (
         <Message
           color="olive"
-          header="Plus d'info"
           content="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
           commodo ligula eget dolor. Aenean massa strong. Cum sociis natoque
           penatibus et magnis dis parturient montes, nascetur ridiculus mus.
@@ -85,7 +83,6 @@ const panels = [
       content: (
         <Message
           color="olive"
-          header="Plus d'info"
           content="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
           commodo ligula eget dolor. Aenean massa strong. Cum sociis natoque
           penatibus et magnis dis parturient montes, nascetur ridiculus mus.
