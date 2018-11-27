@@ -22,6 +22,18 @@ class Header extends Component {
     window.addEventListener('scroll', this.handleScroll)
   }
 
+  componentWillReceiveProps(nextProps) {
+    const route = routes.filter(
+      r => r.path === nextProps.history.location.pathname
+    )
+
+    if (route.length) {
+      this.setState({
+        activeItem: route[0].intlId
+      })
+    }
+  }
+
   componentWillUnmount() {
     window.removeEventListener('scroll', this.handleScroll)
   }
