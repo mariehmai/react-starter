@@ -1,48 +1,53 @@
 import React from 'react'
-import { Container, Card, Image } from 'semantic-ui-react'
+import { Container, Card } from 'semantic-ui-react'
 import { FormattedMessage } from 'react-intl'
+
+import MemberCard from '../../components/MemberCard'
 
 const bigBro = require('../../assets/thibaudbonnevial.jpg')
 const littleBro = require('../../assets/noebonnevial.jpg')
 const smith = require('../../assets/smith.jpg')
 
+const teamMembers = [
+  {
+    nameIntlId: 'team.first.boss',
+    metaIntlId: 'team.first.boss.meta',
+    descriptionIntlId: 'team.first.boss.description',
+    titleIntlId: 'team.first.boss.title',
+    img: bigBro
+  },
+  {
+    nameIntlId: 'team.second.boss',
+    metaIntlId: 'team.second.boss.meta',
+    descriptionIntlId: 'team.second.boss.description',
+    titleIntlId: 'team.second.boss.title',
+    img: littleBro
+  },
+  {
+    nameIntlId: 'team.employee',
+    metaIntlId: 'team.employee.meta',
+    descriptionIntlId: 'team.employee.description',
+    titleIntlId: 'team.employee.title',
+    img: smith
+  }
+]
+
 const Team = () => (
-  <Container>
-    <h2><FormattedMessage id='team.title' /></h2>
-    <Card.Group centered items>
-      <Card>
-        <Card.Content>
-          <Image src={bigBro} alt='' />
-          <Card.Header><FormattedMessage id='team.first.boss' /></Card.Header>
-          <Card.Meta><FormattedMessage id='team.first.boss.meta' /></Card.Meta>
-          <Card.Description><FormattedMessage id='team.first.boss.description' /></Card.Description>
-        </Card.Content>
-        <Card.Content extra>
-          <FormattedMessage id='team.first.boss.title' />
-        </Card.Content>
-      </Card>
-      <Card>
-        <Card.Content>
-          <Image src={littleBro} alt='' />
-          <Card.Header><FormattedMessage id='team.second.boss' /></Card.Header>
-          <Card.Meta><FormattedMessage id='team.second.boss.meta' /></Card.Meta>
-          <Card.Description><FormattedMessage id='team.second.boss.description' /></Card.Description>
-        </Card.Content>
-        <Card.Content extra>
-          <FormattedMessage id='team.second.boss.title' />
-        </Card.Content>
-      </Card>
-      <Card>
-        <Card.Content>
-          <Image src={smith} alt='' />
-          <Card.Header><FormattedMessage id='team.employee' /></Card.Header>
-          <Card.Meta><FormattedMessage id='team.employee.meta' /></Card.Meta>
-          <Card.Description><FormattedMessage id='team.employee.description' /></Card.Description>
-        </Card.Content>
-        <Card.Content extra>
-          <FormattedMessage id='team.employee.title' />
-        </Card.Content>
-      </Card>
+  <Container className="inner">
+    <h2 className="headline">
+      <FormattedMessage id="team.title" />
+    </h2>
+    <Card.Group centered>
+      {teamMembers.map(member => (
+        <MemberCard
+          key={member.nameIntlId}
+          name={<FormattedMessage id={member.nameIntlId} />}
+          meta={<FormattedMessage id={member.metaIntlId} />}
+          description={<FormattedMessage id={member.descriptionIntlId} />}
+          content={<FormattedMessage id={member.titleIntlId} />}
+          img={member.img}
+        />
+      ))}
     </Card.Group>
   </Container>
 )

@@ -3,12 +3,14 @@
 @import '../containers/Home/styles';
 @import '../containers/Services/styles';
 @import '../containers/Contacts/styles';
+@import '../containers/Team/styles';
 // Components
 @import '../components/Header/styles';
 @import '../components/Footer/styles';
 @import '../components/Separator/styles';
 @import '../components/Loading/styles';
 @import '../components/Contact/styles';
+@import '../components/MemberCard/styles';
 
 body {
   margin: 0;
@@ -47,7 +49,8 @@ h2 {
   }
 
   &.title {
-    font-size: 2.5em;
+    font-size: 2em;
+    color: var(--secondary-color);
   }
 }
 
