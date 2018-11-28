@@ -3,7 +3,6 @@
   position: fixed;
   width: 100%;
   height: var(--header-height);
-
   background-color: var(--light-color);
   display: flex;
   align-items: flex-end;
@@ -24,6 +23,7 @@
     }
 
     .header-app-logo {
+      padding-top: 1.5em;
     }
 
     .header-app-text-box {
