@@ -1,65 +1,54 @@
 import React, { Component } from 'react'
-import { Container, Grid, Image, Button, Dimmer, Header } from 'semantic-ui-react'
+import { Button } from 'semantic-ui-react'
+import { FormattedMessage } from 'react-intl'
 
-const treeImg = require('../../assets/tree.jpg')
-const machine = require('../../assets/machine.jpg')
+const contents = [
+  {
+    id: 0,
+    content: 'agricultural'
+  },
+  {
+    id: 1,
+    content: 'lumbering'
+  }
+]
 
-
-export default class Home extends Component {
-  state = { 
-    activeLeft: false,
-    activeRight: false,
+class Home extends Component {
+  navigate = path => e => {
+    const { history } = this.props
+    history.push(path)
   }
 
-  handleShowLeft = () => this.setState({ activeLeft: true })
-  handleHideLeft = () => this.setState({ activeLeft: false })
-  handleShowRight = () => this.setState({ activeRight: true })
-  handleHideRight = () => this.setState({ activeRight: false })
-
   render() {
-    const { activeLeft, activeRight } = this.state
-    const contentLeft = (
-      <div>
-        <h2>Exploitation agricole</h2>
-        <Button>View</Button>
-      </div>
-    )
-    const contentRight = (
-      <div>
-        <h2>Exploitation forestière</h2>
-        <Button>View</Button>
-      </div>
-    )
-
     return (
-      <Container className='home'>
-        <Grid columns={2} divided>
-          <Grid.Row>
-            <Grid.Column className='home-column' >
-              <Dimmer.Dimmable
-                as={Image}
-                dimmed={activeLeft}
-                dimmer={{ active: activeLeft, content: contentLeft }}
-                onMouseEnter={this.handleShowLeft}
-                onMouseLeave={this.handleHideLeft}
-                size='medium'
-                src={treeImg}
-              />
-            </Grid.Column>
-            <Grid.Column className='home-column'>
-              <Dimmer.Dimmable
-                as={Image}
-                dimmed={activeRight}
-                dimmer={{ active: activeRight, content: contentRight }}
-                onMouseEnter={this.handleShowRight}
-                onMouseLeave={this.handleHideRight}
-                size='medium'
-                src={machine}
-              />
-            </Grid.Column>
-          </Grid.Row>
-        </Grid>
-      </Container>
+      <div className="container home">
+        <div className="home-column left">
+          <Button
+            basic
+            inverted
+            color="olive"
+            onClick={this.navigate('agricultural')}
+          >
+            <h1 className="title">
+              <FormattedMessage id="home.exploitation.agricole" />
+            </h1>
+          </Button>
+        </div>
+        <div className="home-column right">
+          <Button
+            basic
+            inverted
+            color="olive"
+            onClick={this.navigate('lumbering')}
+          >
+            <h1 className="title">
+              <FormattedMessage id="home.exploitation.forest" />
+            </h1>
+          </Button>
+        </div>
+      </div>
     )
   }
 }
+
+export default Home

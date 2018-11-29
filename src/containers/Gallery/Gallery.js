@@ -1,28 +1,34 @@
 import React from 'react'
-import { Container, Card } from 'semantic-ui-react'
+import { Container } from 'semantic-ui-react'
 import { FormattedMessage } from 'react-intl'
+import ImageGallery from 'react-image-gallery'
 
 const img = require('../../assets/noebonnevial.jpg')
+const thibau = require('../../assets/thibaudbonnevial.jpg')
+
+const images = [
+  {
+    original: thibau,
+    thumbnail: thibau
+  },
+  {
+    original: img,
+    thumbnail: img
+  },
+  {
+    original: img,
+    thumbnail: img
+  }
+]
 
 const Gallery = () => (
-  <Container>
-    <h2>
+  <Container className="gallery inner">
+    <h2 className="headline">
       <FormattedMessage id="gallery.title" />
     </h2>
-    <Card.Group itemsPerRow={4}>
-      <Card color="brown" image={img} />
-      <Card color="olive" image={img} />
-      <Card color="brown" image={img} />
-      <Card color="olive" image={img} />
-      <Card color="brown" image={img} />
-      <Card color="olive" image={img} />
-      <Card color="brown" image={img} />
-      <Card color="olive" image={img} />
-      <Card color="brown" image={img} />
-      <Card color="olive" image={img} />
-      <Card color="brown" image={img} />
-      <Card color="olive" image={img} />
-    </Card.Group>
+    <div className="gallery-slider">
+      <ImageGallery items={images} />
+    </div>
   </Container>
 )
 
