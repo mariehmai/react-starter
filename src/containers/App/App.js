@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 import { Switch, Route } from 'react-router-dom'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import {
@@ -24,25 +24,21 @@ library.add(
   faSpinner
 )
 
-class App extends Component {
-  render() {
-    return (
-      <div className='app'>
-        <Header />
-        <Switch>
-          {routes.map(r => (
-            <Route
-              key={r.path}
-              exact={r.exact}
-              path={r.path}
-              component={r.component}
-            />
-          ))}
-        </Switch>
-        <Footer />
-      </div>
-    )
-  }
-}
+const App = () => (
+  <div className="app">
+    <Header />
+    <Switch>
+      {routes.map(r => (
+        <Route
+          key={r.path}
+          exact={r.exact}
+          path={r.path}
+          component={r.component}
+        />
+      ))}
+    </Switch>
+    <Footer />
+  </div>
+)
 
 export default App

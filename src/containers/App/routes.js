@@ -2,7 +2,7 @@ import Home from '../Home'
 import Services from '../Services'
 import Team from '../Team'
 import Gallery from '../Gallery'
-import Contact from '../Contact'
+import Contacts from '../Contacts'
 
 export default [
   /*{
@@ -56,10 +56,26 @@ export default [
     last: true
   },*/
   {
-    path: '/home',
+    path: '/',
     intlId: 'nav.home',
     exact: true,
     component: Home,
+    icon: 'table-tennis',
+    main: true
+  },
+  {
+    path: '/agricultural',
+    intlId: 'nav.agricultural',
+    exact: true,
+    component: Services,
+    icon: 'table-tennis',
+    main: true
+  },
+  {
+    path: '/lumbering',
+    intlId: 'nav.lumbering',
+    exact: true,
+    component: Services,
     icon: 'table-tennis',
     main: true
   },
@@ -68,8 +84,7 @@ export default [
     intlId: 'nav.services',
     exact: true,
     component: Services,
-    icon: 'table-tennis',
-    main: true
+    icon: 'table-tennis'
   },
   {
     path: '/team',
@@ -91,8 +106,8 @@ export default [
     path: '/contact',
     intlId: 'nav.contact',
     exact: true,
-    component: Contact,
-    main:true,
+    component: Contacts,
+    main: true,
     icon: 'golf-ball'
   }
 ]
