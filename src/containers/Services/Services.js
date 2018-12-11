@@ -1,77 +1,258 @@
 import React from 'react'
-import { Container, Image, Accordion, Message } from 'semantic-ui-react'
+import { Container, Image, Accordion, Message, Grid } from 'semantic-ui-react'
 
 import { FormattedMessage } from 'react-intl'
 
 const treeImg = require('../../assets/tree.jpg')
+const harvesterImg = require('../../assets/moissonneuse.jpg')
+const skipImg = require('../../assets/benne.jpg')
 
 const panels = [
   {
     key: `panel-0`,
     title: {
       content: (
-        <div className="label-container">
-          <Image className="label-image" size="medium" rounded src={treeImg} />
-          <div className="label-description">
-            <h2 className="label-title">Service 1</h2>
-            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
-          </div>
-        </div>
+        <Grid celled='internally' centered>
+          <Grid.Row>
+            <Grid.Column width="4">
+              <Image className="label-image" size="medium" rounded src={skipImg} />
+            </Grid.Column>
+            <Grid.Column width="10">
+              <div className="label-description">
+                <h2 className="label-title"><FormattedMessage id="agricultural.title1" /></h2>
+                  <Message>
+                    <Message.Item><FormattedMessage id="agricultural.title1.item1" /></Message.Item>
+                    <Message.Item><FormattedMessage id="agricultural.title1.item2" /></Message.Item>
+                  </Message>
+              </div>
+            </Grid.Column>
+          </Grid.Row>
+        </Grid>
       )
     },
-    content: {
-      content: (
-        <Message
-          color="olive"
-          content="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa strong. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede link mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi."
-        />
-      )
-    }
   },
   {
     key: `panel-1`,
     title: {
       content: (
-        <div className="label-container">
-          <Image className="label-image" size="medium" rounded src={treeImg} />
-          <div className="label-description">
-            <h2 className="label-title">Service 2</h2>
-            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
-          </div>
-        </div>
+        <Grid celled='internally' centered>
+          <Grid.Row>
+            <Grid.Column width="4">
+              <Image className="label-image" size="medium" rounded src={skipImg} />
+            </Grid.Column>
+            <Grid.Column width="10">
+              <div className="label-description">
+                <h2 className="label-title"><FormattedMessage id="agricultural.title2" /></h2>
+                  <Message>
+                    <Message.Item><FormattedMessage id="agricultural.title2.item1" /></Message.Item>
+                    <Message.Item><FormattedMessage id="agricultural.title2.item2" /></Message.Item>
+                    <Message.Item><FormattedMessage id="agricultural.title2.item3" /></Message.Item>
+                    <Message.Item><FormattedMessage id="agricultural.title2.item4" /></Message.Item>
+                  </Message>
+              </div>
+            </Grid.Column>
+          </Grid.Row>
+        </Grid>
       )
     },
-    content: {
-      content: (
-        <Message
-          color="olive"
-          content="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa strong. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede link mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi."
-        />
-      )
-    }
   },
   {
     key: `panel-2`,
     title: {
       content: (
-        <div className="label-container">
-          <Image className="label-image" size="medium" rounded src={treeImg} />
-          <div className="label-description">
-            <h2 className="label-title">Service 3</h2>
-            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
-          </div>
-        </div>
+        <Grid celled='internally' centered>
+          <Grid.Row>
+            <Grid.Column width="4">
+              <Image className="label-image" size="medium" rounded src={skipImg} />
+            </Grid.Column>
+            <Grid.Column width="10">
+              <div className="label-description">
+                <h2 className="label-title"><FormattedMessage id="agricultural.title3" /></h2>
+                  <Message>
+                    <Message.Item><FormattedMessage id="agricultural.title3.item1" /></Message.Item>
+                    <Message.Item><FormattedMessage id="agricultural.title3.item2" /></Message.Item>
+                  </Message>
+              </div>
+            </Grid.Column>
+          </Grid.Row>
+        </Grid>
       )
     },
-    content: {
+  },
+  {
+    key: `panel-3`,
+    title: {
       content: (
-        <Message
-          color="olive"
-          content="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa strong. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede link mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi."
-        />
+        <Grid celled='internally' centered>
+          <Grid.Row>
+            <Grid.Column width="4">
+              <Image className="label-image" size="medium" rounded src={skipImg} />
+            </Grid.Column>
+            <Grid.Column width="10">
+              <div className="label-description">
+                <h2 className="label-title"><FormattedMessage id="agricultural.title4" /></h2>
+                  <Message>
+                    <Message.Item><FormattedMessage id="agricultural.title4.item1" /></Message.Item>
+                    <Message.Item><FormattedMessage id="agricultural.title4.item2" /></Message.Item>
+                  </Message>
+              </div>
+            </Grid.Column>
+          </Grid.Row>
+        </Grid>
       )
-    }
-  }
+    },
+  },
+  {
+    key: `panel-4`,
+    title: {
+      content: (
+        <Grid celled='internally' centered>
+          <Grid.Row>
+            <Grid.Column width="4">
+              <Image className="label-image" size="medium" rounded src={skipImg} />
+            </Grid.Column>
+            <Grid.Column width="10">
+              <div className="label-description">
+                <h2 className="label-title"><FormattedMessage id="agricultural.title5" /></h2>
+                  <Message>
+                    <Message.Item><FormattedMessage id="agricultural.title5.item1" /></Message.Item>
+                  </Message>
+              </div>
+            </Grid.Column>
+          </Grid.Row>
+        </Grid>
+      )
+    },
+  },
+  {
+    key: `panel-5`,
+    title: {
+      content: (
+        <Grid celled='internally' centered>
+          <Grid.Row>
+            <Grid.Column width="4">
+              <Image className="label-image" size="medium" rounded src={skipImg} />
+            </Grid.Column>
+            <Grid.Column width="10">
+              <div className="label-description">
+                <h2 className="label-title"><FormattedMessage id="agricultural.title6" /></h2>
+                  <Message>
+                    <Message.Item><FormattedMessage id="agricultural.title6.item1" /></Message.Item>
+                  </Message>
+              </div>
+            </Grid.Column>
+          </Grid.Row>
+        </Grid>
+      )
+    },
+  },
+  {
+    key: `panel-6`,
+    title: {
+      content: (
+        <Grid celled='internally' centered>
+          <Grid.Row>
+            <Grid.Column width="4">
+              <Image className="label-image" size="medium" rounded src={treeImg} />
+            </Grid.Column>
+            <Grid.Column width="10">
+              <div className="label-description">
+                <h2 className="label-title"><FormattedMessage id="lumbering.title1" /></h2>
+                  <Message>
+                    <Message.Item><FormattedMessage id="lumbering.title1.item1" /></Message.Item>
+                  </Message>
+              </div>
+            </Grid.Column>
+          </Grid.Row>
+        </Grid>
+      )
+    },
+  },
+  {
+    key: `panel-7`,
+    title: {
+      content: (
+        <Grid celled='internally' centered>
+          <Grid.Row>
+            <Grid.Column width="4">
+              <Image className="label-image" size="medium" rounded src={skipImg} />
+            </Grid.Column>
+            <Grid.Column width="10">
+              <div className="label-description">
+                <h2 className="label-title"><FormattedMessage id="lumbering.title2" /></h2>
+              </div>
+            </Grid.Column>
+          </Grid.Row>
+        </Grid>
+      )
+    },
+  },
+  {
+    key: `panel-8`,
+    title: {
+      content: (
+        <Grid celled='internally' centered>
+          <Grid.Row>
+            <Grid.Column width="4">
+              <Image className="label-image" size="medium" rounded src={skipImg} />
+            </Grid.Column>
+            <Grid.Column width="10">
+              <div className="label-description">
+                <h2 className="label-title"><FormattedMessage id="lumbering.title3" /></h2>
+                  <Message>
+                    <Message.Item><FormattedMessage id="lumbering.title3.item1" /></Message.Item>
+                  </Message>
+              </div>
+            </Grid.Column>
+          </Grid.Row>
+        </Grid>
+      )
+    },
+  },
+  {
+    key: `panel-9`,
+    title: {
+      content: (
+        <Grid celled='internally' centered>
+          <Grid.Row>
+            <Grid.Column width="4">
+              <Image className="label-image" size="medium" rounded src={skipImg} />
+            </Grid.Column>
+            <Grid.Column width="10">
+              <div className="label-description">
+                <h2 className="label-title"><FormattedMessage id="lumbering.title4" /></h2>
+                  <Message>
+                    <Message.Item><FormattedMessage id="lumbering.title4.item1" /></Message.Item>
+                  </Message>
+              </div>
+            </Grid.Column>
+          </Grid.Row>
+        </Grid>
+      )
+    },
+  },
+  {
+    key: `panel-10`,
+    title: {
+      content: (
+        <Grid celled='internally' centered>
+          <Grid.Row>
+            <Grid.Column width="4">
+              <Image className="label-image" size="medium" rounded src={skipImg} />
+            </Grid.Column>
+            <Grid.Column width="10">
+              <div className="label-description">
+                <h2 className="label-title"><FormattedMessage id="lumbering.title5" /></h2>
+                  <Message>
+                    <Message.Item><FormattedMessage id="lumbering.title5.item1" /></Message.Item>
+                  </Message>
+              </div>
+            </Grid.Column>
+          </Grid.Row>
+        </Grid>
+      )
+    },
+  },
 ]
 
 const Services = () => (
@@ -79,6 +260,11 @@ const Services = () => (
     <h2 className="headline">
       <FormattedMessage id="services.title" />
     </h2>
+    <h3 className="introduction">
+      <p><FormattedMessage id="lumbering.introduction.part1" /></p>
+      <p><FormattedMessage id="lumbering.introduction.part2" /></p>
+      <p><FormattedMessage id="lumbering.introduction.part3" /></p>
+    </h3>
     <Accordion panels={panels} />
   </Container>
 )
