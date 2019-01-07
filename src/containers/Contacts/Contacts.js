@@ -9,13 +9,13 @@ const contacts = [
     name: 'Thibaud Bonnevial',
     phone: '06.06.06.06.06',
     email: 'thibaud.bonnevial@gmail.com',
-    roles: ['Mission #1', 'Mission #2']
+    roles: ['', '']
   },
   {
-    name: 'Noe Bonnevial',
+    name: 'Noé Bonnevial',
     phone: '06.06.06.06.06',
     email: 'noe.bonnevial@gmail.com',
-    roles: ['Mission #1', 'Mission #2']
+    roles: ['', '']
   }
 ]
 
