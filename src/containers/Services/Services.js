@@ -3,7 +3,7 @@ import { Container, Image, Accordion, Message } from 'semantic-ui-react'
 
 import { FormattedMessage } from 'react-intl'
 
-const treeImg = require('../../assets/tree.jpg')
+const treeImg = require('../../assets/agricultural.png')
 
 const panels = [
   {

@@ -80,6 +80,14 @@ export default [
     main: true
   },
   {
+    path: '/civilengineering',
+    intlId: 'nav.civilengineering',
+    exact: true,
+    component: Services,
+    icon: 'table-tennis',
+    main: true
+  },
+  {
     path: '/services',
     intlId: 'nav.services',
     exact: true,

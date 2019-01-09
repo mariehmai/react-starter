@@ -10,11 +10,13 @@
     height: 100%;
 
     &.left {
-      background-image: url('../assets/tree.jpg');
+      background-image: url('../assets/agricultural.png');
+      background-size: cover;
     }
 
     &.right {
-      background-image: url('../assets/machine.jpg');
+      background-image: url('../assets/lumbering.png');
+      background-size: cover;
     }
   }
 
