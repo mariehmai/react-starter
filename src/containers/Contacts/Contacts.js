@@ -7,15 +7,13 @@ import Contact from '../../components/Contact'
 const contacts = [
   {
     name: 'Thibaud Bonnevial',
-    phone: '06.06.06.06.06',
+    phone: '06.32.08.60.25',
     email: 'thibaud.bonnevial@gmail.com',
-    roles: ['', '']
   },
   {
     name: 'Noé Bonnevial',
-    phone: '06.06.06.06.06',
+    phone: '06.78.70.09.29',
     email: 'noe.bonnevial@gmail.com',
-    roles: ['', '']
   }
 ]
 
@@ -30,7 +28,6 @@ const Contacts = () => (
           name={contact.name}
           phone={contact.phone}
           email={contact.email}
-          roles={contact.roles}
         />
       ))}
     </Grid>
