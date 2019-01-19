@@ -23,7 +23,8 @@
     }
 
     .header-app-logo {
-      padding-top: 1.5em;
+      height: 90%;
+      padding-top: 1em;
     }
 
     .header-app-text-box {
@@ -35,7 +36,9 @@
       align-items: flex-start;
 
       .subtitle {
-        margin-top: -15px;
+        margin-top: -20px;
+        font-weight: lighter;
+        font-size: calc(6px + 2vmin)
       }
     }
   }

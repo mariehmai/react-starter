@@ -3,9 +3,8 @@ import { Container, Image, Accordion, Message, Grid } from 'semantic-ui-react'
 
 import { FormattedMessage } from 'react-intl'
 
-const treeImg = require('../../assets/tree.jpg')
-const harvesterImg = require('../../assets/moissonneuse.jpg')
-const skipImg = require('../../assets/benne.jpg')
+const agriImg = require('../../assets/agricultural.png')
+const forestImg = require('../../assets/lumbering.png')
 
 const panels = [
   {
@@ -15,7 +14,7 @@ const panels = [
         <Grid celled='internally' centered>
           <Grid.Row>
             <Grid.Column width="4">
-              <Image className="label-image" size="medium" rounded src={skipImg} />
+              <Image className="label-image" size="medium" rounded src={agriImg} />
             </Grid.Column>
             <Grid.Column width="10">
               <div className="label-description">
@@ -38,7 +37,7 @@ const panels = [
         <Grid celled='internally' centered>
           <Grid.Row>
             <Grid.Column width="4">
-              <Image className="label-image" size="medium" rounded src={skipImg} />
+              <Image className="label-image" size="medium" rounded src={agriImg} />
             </Grid.Column>
             <Grid.Column width="10">
               <div className="label-description">
@@ -63,7 +62,7 @@ const panels = [
         <Grid celled='internally' centered>
           <Grid.Row>
             <Grid.Column width="4">
-              <Image className="label-image" size="medium" rounded src={skipImg} />
+              <Image className="label-image" size="medium" rounded src={agriImg} />
             </Grid.Column>
             <Grid.Column width="10">
               <div className="label-description">
@@ -86,7 +85,7 @@ const panels = [
         <Grid celled='internally' centered>
           <Grid.Row>
             <Grid.Column width="4">
-              <Image className="label-image" size="medium" rounded src={skipImg} />
+              <Image className="label-image" size="medium" rounded src={agriImg} />
             </Grid.Column>
             <Grid.Column width="10">
               <div className="label-description">
@@ -109,7 +108,7 @@ const panels = [
         <Grid celled='internally' centered>
           <Grid.Row>
             <Grid.Column width="4">
-              <Image className="label-image" size="medium" rounded src={skipImg} />
+              <Image className="label-image" size="medium" rounded src={agriImg} />
             </Grid.Column>
             <Grid.Column width="10">
               <div className="label-description">
@@ -131,7 +130,7 @@ const panels = [
         <Grid celled='internally' centered>
           <Grid.Row>
             <Grid.Column width="4">
-              <Image className="label-image" size="medium" rounded src={skipImg} />
+              <Image className="label-image" size="medium" rounded src={agriImg} />
             </Grid.Column>
             <Grid.Column width="10">
               <div className="label-description">
@@ -153,7 +152,7 @@ const panels = [
         <Grid celled='internally' centered>
           <Grid.Row>
             <Grid.Column width="4">
-              <Image className="label-image" size="medium" rounded src={treeImg} />
+              <Image className="label-image" size="medium" rounded src={forestImg} />
             </Grid.Column>
             <Grid.Column width="10">
               <div className="label-description">
@@ -175,7 +174,7 @@ const panels = [
         <Grid celled='internally' centered>
           <Grid.Row>
             <Grid.Column width="4">
-              <Image className="label-image" size="medium" rounded src={skipImg} />
+              <Image className="label-image" size="medium" rounded src={forestImg} />
             </Grid.Column>
             <Grid.Column width="10">
               <div className="label-description">
@@ -194,7 +193,7 @@ const panels = [
         <Grid celled='internally' centered>
           <Grid.Row>
             <Grid.Column width="4">
-              <Image className="label-image" size="medium" rounded src={skipImg} />
+              <Image className="label-image" size="medium" rounded src={forestImg} />
             </Grid.Column>
             <Grid.Column width="10">
               <div className="label-description">
@@ -216,7 +215,7 @@ const panels = [
         <Grid celled='internally' centered>
           <Grid.Row>
             <Grid.Column width="4">
-              <Image className="label-image" size="medium" rounded src={skipImg} />
+              <Image className="label-image" size="medium" rounded src={forestImg} />
             </Grid.Column>
             <Grid.Column width="10">
               <div className="label-description">
@@ -238,7 +237,7 @@ const panels = [
         <Grid celled='internally' centered>
           <Grid.Row>
             <Grid.Column width="4">
-              <Image className="label-image" size="medium" rounded src={skipImg} />
+              <Image className="label-image" size="medium" rounded src={forestImg} />
             </Grid.Column>
             <Grid.Column width="10">
               <div className="label-description">
