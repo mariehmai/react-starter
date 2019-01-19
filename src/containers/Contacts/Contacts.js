@@ -8,12 +8,12 @@ const contacts = [
   {
     name: 'Thibaud Bonnevial',
     phone: '06.32.08.60.25',
-    email: 'thibaud.bonnevial@gmail.com',
+    email: 'thibaud.bonnevial@gmail.com'
   },
   {
     name: 'Noé Bonnevial',
     phone: '06.78.70.09.29',
-    email: 'noe.bonnevial@gmail.com',
+    email: 'noe.bonnevial@gmail.com'
   }
 ]
 
