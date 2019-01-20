@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { object } from 'prop-types'
+import { object, func } from 'prop-types'
 import { withRouter } from 'react-router'
 import { FormattedMessage } from 'react-intl'
 import { Menu } from 'semantic-ui-react'
@@ -9,7 +9,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import routes from '../../containers/App/routes'
 import logo from '../../assets/logo.svg'
 import menuIcon from '../../assets/menu.svg'
-import Separator from '../../components/Separator'
+import Separator from '../Separator'
+import { CATEGORIES } from '../../constants/globals'
 
 class Header extends Component {
   state = {
@@ -52,13 +53,18 @@ class Header extends Component {
   }
 
   handleItemClick = route => e => {
-    const { history } = this.props
+    const { history, switchCategory } = this.props
+    const category = route.path.replace('/', '')
+
     this.setState({ activeItem: route.intlId })
+    if (CATEGORIES.includes(category)) {
+      switchCategory(category)
+    }
+
     history.push(route.path)
   }
 
   render() {
-    const { history } = this.props
     const { isTop, showMenu, activeItem } = this.state
 
     return (
@@ -126,7 +132,8 @@ class Header extends Component {
 }
 
 Header.propTypes = {
-  history: object.isRequired
+  history: object.isRequired,
+  switchCategory: func.isRequired
 }
 
 export default withRouter(Header)
