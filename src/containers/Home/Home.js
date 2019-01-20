@@ -1,21 +1,12 @@
 import React, { Component } from 'react'
+import { func, object } from 'prop-types'
 import { Button } from 'semantic-ui-react'
 import { FormattedMessage } from 'react-intl'
 
-const contents = [
-  {
-    id: 0,
-    content: 'agricultural'
-  },
-  {
-    id: 1,
-    content: 'lumbering'
-  }
-]
-
 class Home extends Component {
   navigate = path => e => {
-    const { history } = this.props
+    const { history, switchCategory } = this.props
+    switchCategory(path)
     history.push(path)
   }
 
@@ -49,6 +40,11 @@ class Home extends Component {
       </div>
     )
   }
+}
+
+Home.propTypes = {
+  history: object.isRequired,
+  switchCategory: func.isRequired
 }
 
 export default Home

@@ -4,21 +4,28 @@ import { BrowserRouter } from 'react-router-dom'
 import { IntlProvider } from 'react-intl'
 import 'semantic-ui-css/semantic.min.css'
 import 'react-image-gallery/styles/css/image-gallery.css'
+import { Provider } from 'react-redux'
+import { createStore } from 'redux'
 
 import App from './containers/App/App'
 import * as serviceWorker from './serviceWorker'
 import './styles/theme.scss'
 import { language, translations } from './translations/i18n'
+import reducers from './store/reducers'
 
 // `dotenv` config
 require('dotenv').config()
 
+const store = createStore(reducers)
+
 ReactDOM.render(
-  <IntlProvider locale={language} messages={translations[language]}>
-    <BrowserRouter>
-      <App />
-    </BrowserRouter>
-  </IntlProvider>,
+  <Provider store={store}>
+    <IntlProvider locale={language} messages={translations[language]}>
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
+    </IntlProvider>
+  </Provider>,
   document.getElementById('root')
 )
 
