@@ -8,9 +8,7 @@ const mapDispatchToProps = dispatch => ({
 })
 
 const Home = connect(
-  state => ({
-    category: state.category
-  }),
+  () => ({}),
   mapDispatchToProps
 )(HomeComponent)
 

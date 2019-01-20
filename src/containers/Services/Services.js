@@ -366,7 +366,6 @@ const panels = [
 
 const Services = ({ category }) => (
   <Container className="services inner">
-    {console.log(category)}
     <h2 className="headline">
       <FormattedMessage id="services.title" />
     </h2>
