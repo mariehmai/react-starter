@@ -4,18 +4,12 @@ import { withRouter } from 'react-router'
 import { FormattedMessage } from 'react-intl'
 import { Menu } from 'semantic-ui-react'
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-
 import routes from '../../containers/App/routes'
 import logo from '../../assets/logo.svg'
-import menuIcon from '../../assets/menu.svg'
-import Separator from '../Separator'
 import { CATEGORIES } from '../../constants/globals'
 
 class Header extends Component {
   state = {
-    isTop: true,
-    showMenu: false,
     activeItem: 'nav.home'
   }
 
@@ -39,14 +33,6 @@ class Header extends Component {
     window.removeEventListener('scroll', this.handleScroll)
   }
 
-  handleScroll = () => {
-    const top = window.scrollY
-    if (top > 40) this.setState({ isTop: false })
-    else this.setState({ isTop: true })
-  }
-
-  toggleMenu = () => this.setState({ showMenu: !this.state.showMenu })
-
   navigate = route => e => {
     const { history } = this.props
     history.push(route)
@@ -65,12 +51,10 @@ class Header extends Component {
   }
 
   render() {
-    const { isTop, showMenu, activeItem } = this.state
+    const { activeItem } = this.state
 
     return (
       <div className="header">
-        {/* <div className={`header-content ${!isTop && 'not-top'}`}> */}
-        {/* <div className="header-nav-container"> */}
         <div className="header-app">
           <img
             className="header-app-logo"
@@ -110,27 +94,6 @@ class Header extends Component {
             </div>
           </div>
         </div>
-
-        {/* <div className="header-nav-icon-container" onClick={this.toggleMenu}>
-          <img className="header-nav-icon" src={menuIcon} alt="" />
-        </div> */}
-        {/* </div> */}
-        {/* </div> */}
-        {showMenu && (
-          <div className="app-menu">
-            {routes.map(route => (
-              <div key={route.intlId} className="app-menu-item">
-                <div className="app-menu-item-container">
-                  <div className="app-menu-item-header">
-                    <FormattedMessage id={route.intlId} />
-                    <FontAwesomeIcon icon={route.icon} size="lg" />
-                  </div>
-                  {route.last && <Separator />}
-                </div>
-              </div>
-            ))}
-          </div>
-        )}
       </div>
     )
   }

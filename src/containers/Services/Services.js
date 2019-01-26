@@ -1,6 +1,6 @@
 import React from 'react'
 import { string } from 'prop-types'
-import { Container, Image, Accordion, Message, Grid } from 'semantic-ui-react'
+import { Container, Image, Message, Grid } from 'semantic-ui-react'
 import { FormattedMessage } from 'react-intl'
 import contents from './contents'
 
