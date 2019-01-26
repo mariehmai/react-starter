@@ -23,7 +23,7 @@ const Services = ({ category }) => (
     {contents.filter(content => content.category === category).map(content => (
       <Grid key={content.key} celled="internally" centered>
         <Grid.Row>
-          <Grid.Column width="4">
+          <Grid.Column width="5">
             <Image
               className="label-image"
               size="medium"
