@@ -1,5 +1,3 @@
-import { LabelDetail } from 'semantic-ui-react'
-
 const tractionImg = require('../../assets/traction.png')
 const landworkImg = require('../../assets/travauxsol.png')
 const seedingImg = require('../../assets/semis.png')

@@ -1,8 +1,10 @@
 import React from 'react'
 import { string } from 'prop-types'
-import { Container, Image, Accordion, Message, Grid } from 'semantic-ui-react'
+import { Container, Image, Message, Grid } from 'semantic-ui-react'
 import { FormattedMessage } from 'react-intl'
+
 import contents from './contents'
+import intros from './intros'
 
 const Services = ({ category }) => (
   <Container className="services inner">
@@ -10,15 +12,12 @@ const Services = ({ category }) => (
       <FormattedMessage id="services.title" />
     </h2>
     <h3 className="introduction">
-      <p>
-        <FormattedMessage id="lumbering.introduction.part1" />
-      </p>
-      <p>
-        <FormattedMessage id="lumbering.introduction.part2" />
-      </p>
-      <p>
-        <FormattedMessage id="lumbering.introduction.part3" />
-      </p>
+      {intros[category] &&
+        intros[category].map((intro, idx) => (
+          <p key={idx}>
+            <FormattedMessage id={intro.introIntlId} />
+          </p>
+        ))}
     </h3>
     {contents.filter(content => content.category === category).map(content => (
       <Grid key={content.key} celled="internally" centered>
@@ -37,8 +36,8 @@ const Services = ({ category }) => (
                 <FormattedMessage id={content.titleIntlId} />
               </h2>
               <Message>
-                {content.messages.map(message => (
-                  <Message.Item>
+                {content.messages.map((message, idx) => (
+                  <Message.Item key={idx}>
                     <FormattedMessage id={message.messageIntlId} />
                   </Message.Item>
                 ))}
