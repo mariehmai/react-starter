@@ -6,15 +6,21 @@ import { Menu } from 'semantic-ui-react'
 
 import routes from '../../containers/App/routes'
 import logo from '../../assets/logo.svg'
-import { CATEGORIES } from '../../constants/globals'
 
 class Header extends Component {
   state = {
-    activeItem: 'nav.home'
+    activeItem: ''
   }
 
   componentDidMount() {
-    window.addEventListener('scroll', this.handleScroll)
+    const { location, switchCategory } = this.props
+    const activeItem =
+      location.pathname === '/'
+        ? 'nav.home'
+        : location.pathname.replace('/', 'nav.')
+
+    this.setState({ activeItem })
+    switchCategory(location.pathname.replace('/', ''))
   }
 
   componentWillReceiveProps(nextProps) {
@@ -29,10 +35,6 @@ class Header extends Component {
     }
   }
 
-  componentWillUnmount() {
-    window.removeEventListener('scroll', this.handleScroll)
-  }
-
   navigate = route => e => {
     const { history } = this.props
     history.push(route)
@@ -43,9 +45,7 @@ class Header extends Component {
     const category = route.path.replace('/', '')
 
     this.setState({ activeItem: route.intlId })
-    if (CATEGORIES.includes(category)) {
-      switchCategory(category)
-    }
+    switchCategory(category)
 
     history.push(route.path)
   }
@@ -101,6 +101,7 @@ class Header extends Component {
 
 Header.propTypes = {
   history: object.isRequired,
+  location: object.isRequired,
   switchCategory: func.isRequired
 }
 
