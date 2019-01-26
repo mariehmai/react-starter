@@ -1,110 +1,57 @@
 import React from 'react'
-import { Container, Image, Accordion, Message } from 'semantic-ui-react'
-
+import { string } from 'prop-types'
+import { Container, Image, Message, Grid } from 'semantic-ui-react'
 import { FormattedMessage } from 'react-intl'
 
-const treeImg = require('../../assets/agricultural.png')
+import contents from './contents'
+import intros from './intros'
 
-const panels = [
-  {
-    key: `panel-0`,
-    title: {
-      content: (
-        <div className="label-container">
-          <Image className="label-image" size="medium" rounded src={treeImg} />
-          <div className="label-description">
-            <h2 className="label-title">Service 1</h2>
-            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
-          </div>
-        </div>
-      )
-    },
-    content: {
-      content: (
-        <Message
-          color="olive"
-          content="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
-          commodo ligula eget dolor. Aenean massa strong. Cum sociis natoque
-          penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-          Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.
-          Nulla consequat massa quis enim. Donec pede justo, fringilla vel,
-          aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut,
-          imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede
-          link mollis pretium. Integer tincidunt. Cras dapibus. Vivamus
-          elementum semper nisi."
-        />
-      )
-    }
-  },
-  {
-    key: `panel-1`,
-    title: {
-      content: (
-        <div className="label-container">
-          <Image className="label-image" size="medium" rounded src={treeImg} />
-          <div className="label-description">
-            <h2 className="label-title">Service 2</h2>
-            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
-          </div>
-        </div>
-      )
-    },
-    content: {
-      content: (
-        <Message
-          color="olive"
-          content="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
-          commodo ligula eget dolor. Aenean massa strong. Cum sociis natoque
-          penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-          Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.
-          Nulla consequat massa quis enim. Donec pede justo, fringilla vel,
-          aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut,
-          imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede
-          link mollis pretium. Integer tincidunt. Cras dapibus. Vivamus
-          elementum semper nisi."
-        />
-      )
-    }
-  },
-  {
-    key: `panel-2`,
-    title: {
-      content: (
-        <div className="label-container">
-          <Image className="label-image" size="medium" rounded src={treeImg} />
-          <div className="label-description">
-            <h2 className="label-title">Service 3</h2>
-            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
-          </div>
-        </div>
-      )
-    },
-    content: {
-      content: (
-        <Message
-          color="olive"
-          content="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
-          commodo ligula eget dolor. Aenean massa strong. Cum sociis natoque
-          penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-          Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.
-          Nulla consequat massa quis enim. Donec pede justo, fringilla vel,
-          aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut,
-          imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede
-          link mollis pretium. Integer tincidunt. Cras dapibus. Vivamus
-          elementum semper nisi."
-        />
-      )
-    }
-  }
-]
-
-const Services = () => (
+const Services = ({ category }) => (
   <Container className="services inner">
     <h2 className="headline">
       <FormattedMessage id="services.title" />
     </h2>
-    <Accordion panels={panels} />
+    <h3 className="introduction">
+      {intros[category] &&
+        intros[category].map((intro, idx) => (
+          <p key={idx}>
+            <FormattedMessage id={intro.introIntlId} />
+          </p>
+        ))}
+    </h3>
+    {contents.filter(content => content.category === category).map(content => (
+      <Grid key={content.key} celled="internally" centered>
+        <Grid.Row>
+          <Grid.Column width="5">
+            <Image
+              className="label-image"
+              size="medium"
+              rounded
+              src={content.image}
+            />
+          </Grid.Column>
+          <Grid.Column width="10">
+            <div className="label-description">
+              <h2 className="label-title">
+                <FormattedMessage id={content.titleIntlId} />
+              </h2>
+              <Message>
+                {content.messages.map((message, idx) => (
+                  <Message.Item key={idx}>
+                    <FormattedMessage id={message.messageIntlId} />
+                  </Message.Item>
+                ))}
+              </Message>
+            </div>
+          </Grid.Column>
+        </Grid.Row>
+      </Grid>
+    ))}
   </Container>
 )
+
+Services.propTypes = {
+  category: string.isRequired
+}
 
 export default Services
