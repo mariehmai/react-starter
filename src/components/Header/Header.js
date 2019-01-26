@@ -71,8 +71,13 @@ class Header extends Component {
       <div className="header">
         {/* <div className={`header-content ${!isTop && 'not-top'}`}> */}
         {/* <div className="header-nav-container"> */}
-        <div className="header-app" onClick={this.handleItemClick(routes[0])}>
-          <img className="header-app-logo" src={logo} alt="app-logo" />
+        <div className="header-app">
+          <img
+            className="header-app-logo"
+            src={logo}
+            alt="app-logo"
+            onClick={this.handleItemClick(routes[0])}
+          />
           <div className="header-app-text-box">
             <p className="headline">
               <FormattedMessage id="app.title" />
@@ -80,30 +85,30 @@ class Header extends Component {
             <h3 className="subtitle">
               <FormattedMessage id="app.subtitle" />
             </h3>
+            <div className="header-menu">
+              <Menu pointing secondary color="olive">
+                <Menu.Menu className="header-menu-item" position="right">
+                  {routes.map(
+                    route =>
+                      route.main && (
+                        <div key={`${route.intlId}-div-d`}>
+                          <Menu.Item
+                            name={route.intlId}
+                            content={
+                              <p className="nav">
+                                <FormattedMessage id={route.intlId} />
+                              </p>
+                            }
+                            active={activeItem === route.intlId}
+                            onClick={this.handleItemClick(route)}
+                          />
+                        </div>
+                      )
+                  )}
+                </Menu.Menu>
+              </Menu>
+            </div>
           </div>
-        </div>
-        <div className="header-menu">
-          <Menu pointing secondary color="olive">
-            <Menu.Menu position="right">
-              {routes.map(
-                route =>
-                  route.main && (
-                    <div key={`${route.intlId}-div-d`}>
-                      <Menu.Item
-                        name={route.intlId}
-                        content={
-                          <p className="nav">
-                            <FormattedMessage id={route.intlId} />
-                          </p>
-                        }
-                        active={activeItem === route.intlId}
-                        onClick={this.handleItemClick(route)}
-                      />
-                    </div>
-                  )
-              )}
-            </Menu.Menu>
-          </Menu>
         </div>
 
         {/* <div className="header-nav-icon-container" onClick={this.toggleMenu}>
