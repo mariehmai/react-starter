@@ -111,10 +111,6 @@ const images = [
     thumbnail: agricultural14
   },
   {
-    original: agricultural14,
-    thumbnail: agricultural14
-  },
-  {
     original: agricultural15,
     thumbnail: agricultural15
   },
