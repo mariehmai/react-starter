@@ -37,8 +37,8 @@ const Services = ({ category }) => (
                 <FormattedMessage id={content.titleIntlId} />
               </h2>
               <Message>
-                {content.messages.map(message => (
-                  <Message.Item>
+                {content.messages.map((message, idx) => (
+                  <Message.Item key={idx}>
                     <FormattedMessage id={message.messageIntlId} />
                   </Message.Item>
                 ))}
