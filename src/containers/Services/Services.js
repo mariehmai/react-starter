@@ -10,7 +10,6 @@ const Services = ({ category }) => (
   <Container className="services inner">
     <h2 className="headline">
       <FormattedMessage id="services.title" />
-      {console.log()}
     </h2>
     <h3 className="introduction">
       {intros[category] &&
