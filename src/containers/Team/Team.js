@@ -41,7 +41,7 @@ const Team = () => (
     <h2 className="headline">
       <FormattedMessage id="team.title" />
     </h2>
-    <Card.Group centered >
+    <Card.Group centered>
       {teamMembers.map(member => (
         <MemberCard
           key={member.nameIntlId}
