@@ -6,15 +6,10 @@ import Contact from '../../components/Contact'
 
 const contacts = [
   {
-    name: 'Thibaud Bonnevial',
-    phone: '06.32.08.60.25',
-    email: 'thibaud.bonnevial@gmail.com'
+    name: 'SARL Bonnevial',
+    phone: '',
+    email: 'contact@sarlbonnevial.fr'
   },
-  {
-    name: 'Noé Bonnevial',
-    phone: '06.78.70.09.29',
-    email: 'noe.bonnevial@gmail.com'
-  }
 ]
 
 const Contacts = () => (
