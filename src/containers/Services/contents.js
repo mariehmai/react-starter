@@ -2,7 +2,7 @@ const tractionImg = require('../../assets/traction.png')
 const landworkImg = require('../../assets/travauxsol.png')
 const seedingImg = require('../../assets/semis.png')
 const harvestImg = require('../../assets/recolte.png')
-const agriImg = require('../../assets/agricultural.png')
+const pulveImg = require('../../assets/pulverisateur.jpg')
 const carriageImg = require('../../assets/transport.png')
 const harvestmachineImg = require('../../assets/abbateuse.png')
 const carrierImg = require('../../assets/porteur.png')
@@ -46,7 +46,7 @@ export default [
   {
     key: `content-3`,
     category: 'agricultural',
-    image: agriImg,
+    image: pulveImg,
     titleIntlId: 'agricultural.title4',
     messages: [
       { messageIntlId: 'agricultural.title4.item1' },
