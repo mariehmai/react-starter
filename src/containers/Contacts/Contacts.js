@@ -7,8 +7,8 @@ import Contact from '../../components/Contact'
 const contacts = [
   {
     name: 'SARL Bonnevial',
-    phone: '',
-    email: 'contact@sarlbonnevial.fr'
+    email: 'contact@sarlbonnevial.fr',
+    phone: '06.32.08.60.25 / 06.78.70.09.29'
   },
 ]
 
@@ -22,8 +22,8 @@ const Contacts = () => (
         <Contact
           key={contact.email}
           name={contact.name}
-          phone={contact.phone}
           email={contact.email}
+          phone={contact.phone}
         />
       ))}
     </Grid>
