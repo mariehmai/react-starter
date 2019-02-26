@@ -6,7 +6,8 @@ import MemberCard from '../../components/MemberCard'
 
 const boss = require('../../assets/thibaudbonnevial.jpg')
 const second = require('../../assets/noebonnevial.jpg')
-const employee1 = require('../../assets/alexandretonnelier.jpg')
+const employee = require('../../assets/alexandretonnelier.jpg')
+const employee1 = ('../../assets/""')
 
 const teamMembers = [
   {
@@ -25,6 +26,12 @@ const teamMembers = [
     nameIntlId: 'team.employee',
     descriptionIntlId: 'team.employee.description',
     titleIntlId: 'team.employee.title',
+    img: employee
+  },
+  {
+    nameIntlId: 'team.employee1',
+    descriptionIntlId: 'team.employee1.description',
+    titleIntlId: 'team.employee1.title',
     img: employee1
   }
 ]
@@ -34,7 +41,7 @@ const Team = () => (
     <h2 className="headline">
       <FormattedMessage id="team.title" />
     </h2>
-    <Card.Group centered>
+    <Card.Group centered >
       {teamMembers.map(member => (
         <MemberCard
           key={member.nameIntlId}
