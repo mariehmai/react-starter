@@ -6,15 +6,10 @@ import Contact from '../../components/Contact'
 
 const contacts = [
   {
-    name: 'Thibaud Bonnevial',
-    phone: '06.32.08.60.25',
-    email: 'thibaud.bonnevial@gmail.com'
+    name: 'SARL Bonnevial',
+    email: 'contact@sarlbonnevial.fr',
+    phone: '06.32.08.60.25 / 06.78.70.09.29'
   },
-  {
-    name: 'Noé Bonnevial',
-    phone: '06.78.70.09.29',
-    email: 'noe.bonnevial@gmail.com'
-  }
 ]
 
 const Contacts = () => (
@@ -27,8 +22,8 @@ const Contacts = () => (
         <Contact
           key={contact.email}
           name={contact.name}
-          phone={contact.phone}
           email={contact.email}
+          phone={contact.phone}
         />
       ))}
     </Grid>
