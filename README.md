@@ -19,6 +19,6 @@ cd react-starter/
 ### Run the project
 
 ```
-yarn
-yarn start
+npm i
+npm start
 ```

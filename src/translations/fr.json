@@ -1,11 +1,11 @@
 {
-  "app.title": "My app",
-  "nav.home": "Home",
-  "nav.aboutus": "About us",
+  "app.title": "Mon app",
+  "nav.home": "Accueil",
+  "nav.aboutus": "À propos",
   "nav.services": "Services",
-  "nav.events": "Incoming events",
+  "nav.events": "Évenements à venir",
   "nav.contact": "Contact",
-  "aboutus.title": "About us",
+  "aboutus.title": "À propos",
   "services.title": "Services",
-  "contact.title": "Contact us"
+  "contact.title": "Nous contacter"
 }
